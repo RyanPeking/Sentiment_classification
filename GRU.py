@@ -101,7 +101,8 @@ def get_model():
 
 
 if __name__ == '__main__':
-    X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, 'location_traffic_convenience')
+    # X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, 'location_traffic_convenience')
+    X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, 'location_distance_from_business_district')
 
     model = get_model()
 
