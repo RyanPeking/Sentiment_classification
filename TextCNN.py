@@ -43,11 +43,14 @@ def tokenizer(X_train, X_valid):
 
 
 def get_data(train_path, valid_path, category):
+    # 放到服务器上跑需要改成这行
+    # train = pd.read_csv(train_path, lineterminator='\n')
     train = pd.read_csv(train_path)
     X_train = train['content_cut_del_stopwords']
     y_train = train[category]
     y_train = reformat(y_train)
 
+    # valid = pd.read_csv(valid_path, lineterminator='\n')
     valid = pd.read_csv(valid_path)
     X_valid = valid['content_cut_del_stopwords']
     y_valid = valid[category]
@@ -103,17 +106,26 @@ def get_model():
 
     return model
 
-
-if __name__ == '__main__':
-    X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, 'location_traffic_convenience')
-    # X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, 'location_distance_from_business_district')
-
+def train_model(i, category, category_num):
+    print('training({}/{}): {}'.format(str(i+1), str(category_num), category))
     model = get_model()
-
     batch_size = 32
-    epochs = 5
-
+    epochs = 3
+    X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, category)
     RocAuc = RocAucEvaluation(validation_data=(X_valid, y_valid), interval=1)
-
     hist = model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, validation_data=(X_valid, y_valid),
                      callbacks=[RocAuc], verbose=2)
+    print('-----------------------------------------------------------------------------------------------')
+
+
+if __name__ == '__main__':
+    categories = ['location_traffic_convenience', 'location_distance_from_business_district', 'location_easy_to_find',
+                  'service_wait_time', 'service_waiters_attitude', 'service_parking_convenience',
+                  'service_serving_speed',
+                  'price_level', 'price_cost_effective', 'price_discount', 'environment_decoration',
+                  'environment_noise',
+                  'environment_space', 'environment_cleaness', 'dish_portion', 'dish_taste', 'dish_look',
+                  'dish_recommendation',
+                  'others_overall_experience', 'others_willing_to_consume_again']
+    for i, category in enumerate(categories):
+        train_model(i, category, len(categories))
