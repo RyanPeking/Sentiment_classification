@@ -102,7 +102,7 @@ def get_model():
     # checkpoint = ModelCheckpoint('weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc', verbose=1, save_best_only=True, mode='auto')
     adam = Adam(lr=1e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
 
-    model.compile(optimizer=adam, loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer=adam, loss='binary_crossentropy', metrics=['categorical_accuracy'])
 
     return model
 

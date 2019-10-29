@@ -1,0 +1,368 @@
+training(1/20): location_traffic_convenience
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/keras/initializers.py:119: calling RandomUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/keras/initializers.py:143: calling RandomNormal.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.909940 
+
+105000/105000 - 448s - loss: 0.1480 - categorical_accuracy: 0.9048 - val_loss: 0.1053 - val_categorical_accuracy: 0.9338
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.927976 
+
+105000/105000 - 445s - loss: 0.1009 - categorical_accuracy: 0.9344 - val_loss: 0.0982 - val_categorical_accuracy: 0.9377
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.935873 
+
+105000/105000 - 445s - loss: 0.0839 - categorical_accuracy: 0.9427 - val_loss: 0.0975 - val_categorical_accuracy: 0.9379
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.847051 
+
+105000/105000 - 447s - loss: 0.1992 - categorical_accuracy: 0.8500 - val_loss: 0.1608 - val_categorical_accuracy: 0.8786
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.867137 
+
+105000/105000 - 446s - loss: 0.1452 - categorical_accuracy: 0.8888 - val_loss: 0.1531 - val_categorical_accuracy: 0.8804
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.876129 
+
+105000/105000 - 446s - loss: 0.1251 - categorical_accuracy: 0.9022 - val_loss: 0.1541 - val_categorical_accuracy: 0.8793
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.912936 
+
+105000/105000 - 447s - loss: 0.1979 - categorical_accuracy: 0.8625 - val_loss: 0.1558 - val_categorical_accuracy: 0.8897
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.926153 
+
+105000/105000 - 445s - loss: 0.1440 - categorical_accuracy: 0.8948 - val_loss: 0.1447 - val_categorical_accuracy: 0.8978
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.926741 
+
+105000/105000 - 446s - loss: 0.1222 - categorical_accuracy: 0.9082 - val_loss: 0.1445 - val_categorical_accuracy: 0.8977
+-----------------------------------------------------------------------------------------------
+training(4/20): service_wait_time
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.890444 
+
+105000/105000 - 446s - loss: 0.1675 - categorical_accuracy: 0.8884 - val_loss: 0.1378 - val_categorical_accuracy: 0.9017
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.901817 
+
+105000/105000 - 446s - loss: 0.1290 - categorical_accuracy: 0.9036 - val_loss: 0.1324 - val_categorical_accuracy: 0.9025
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.904254 
+
+105000/105000 - 446s - loss: 0.1135 - categorical_accuracy: 0.9139 - val_loss: 0.1308 - val_categorical_accuracy: 0.9026
+-----------------------------------------------------------------------------------------------
+training(5/20): service_waiters_attitude
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.925070 
+
+105000/105000 - 447s - loss: 0.3112 - categorical_accuracy: 0.7210 - val_loss: 0.2350 - val_categorical_accuracy: 0.7999
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.937119 
+
+105000/105000 - 446s - loss: 0.2199 - categorical_accuracy: 0.8128 - val_loss: 0.2165 - val_categorical_accuracy: 0.8163
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.938958 
+
+105000/105000 - 446s - loss: 0.1887 - categorical_accuracy: 0.8425 - val_loss: 0.2130 - val_categorical_accuracy: 0.8178
+-----------------------------------------------------------------------------------------------
+training(6/20): service_parking_convenience
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.966690 
+
+105000/105000 - 447s - loss: 0.0746 - categorical_accuracy: 0.9538 - val_loss: 0.0461 - val_categorical_accuracy: 0.9661
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.976194 
+
+105000/105000 - 445s - loss: 0.0409 - categorical_accuracy: 0.9696 - val_loss: 0.0403 - val_categorical_accuracy: 0.9713
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.974354 
+
+105000/105000 - 445s - loss: 0.0330 - categorical_accuracy: 0.9759 - val_loss: 0.0394 - val_categorical_accuracy: 0.9717
+-----------------------------------------------------------------------------------------------
+training(7/20): service_serving_speed
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.914152 
+
+105000/105000 - 446s - loss: 0.1752 - categorical_accuracy: 0.8862 - val_loss: 0.1351 - val_categorical_accuracy: 0.9076
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.927565 
+
+105000/105000 - 445s - loss: 0.1220 - categorical_accuracy: 0.9143 - val_loss: 0.1225 - val_categorical_accuracy: 0.9153
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.929706 
+
+105000/105000 - 445s - loss: 0.1016 - categorical_accuracy: 0.9267 - val_loss: 0.1204 - val_categorical_accuracy: 0.9179
+-----------------------------------------------------------------------------------------------
+training(8/20): price_level
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.897068 
+
+105000/105000 - 446s - loss: 0.3721 - categorical_accuracy: 0.6505 - val_loss: 0.3011 - val_categorical_accuracy: 0.7248
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.912433 
+
+105000/105000 - 445s - loss: 0.2786 - categorical_accuracy: 0.7487 - val_loss: 0.2798 - val_categorical_accuracy: 0.7471
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.917568 
+
+105000/105000 - 445s - loss: 0.2462 - categorical_accuracy: 0.7814 - val_loss: 0.2728 - val_categorical_accuracy: 0.7561
+-----------------------------------------------------------------------------------------------
+training(9/20): price_cost_effective
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.896121 
+
+105000/105000 - 447s - loss: 0.2121 - categorical_accuracy: 0.8403 - val_loss: 0.1680 - val_categorical_accuracy: 0.8700
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.909216 
+
+105000/105000 - 445s - loss: 0.1595 - categorical_accuracy: 0.8770 - val_loss: 0.1597 - val_categorical_accuracy: 0.8745
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.913711 
+
+105000/105000 - 445s - loss: 0.1414 - categorical_accuracy: 0.8945 - val_loss: 0.1575 - val_categorical_accuracy: 0.8793
+-----------------------------------------------------------------------------------------------
+training(10/20): price_discount
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.918778 
+
+105000/105000 - 447s - loss: 0.2679 - categorical_accuracy: 0.7669 - val_loss: 0.2072 - val_categorical_accuracy: 0.8220
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.927334 
+
+105000/105000 - 445s - loss: 0.2000 - categorical_accuracy: 0.8275 - val_loss: 0.1992 - val_categorical_accuracy: 0.8306
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.930136 
+
+105000/105000 - 445s - loss: 0.1796 - categorical_accuracy: 0.8465 - val_loss: 0.1978 - val_categorical_accuracy: 0.8317
+-----------------------------------------------------------------------------------------------
+training(11/20): environment_decoration
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.893728 
+
+105000/105000 - 446s - loss: 0.2871 - categorical_accuracy: 0.7578 - val_loss: 0.2295 - val_categorical_accuracy: 0.8092
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.920003 
+
+105000/105000 - 445s - loss: 0.2132 - categorical_accuracy: 0.8255 - val_loss: 0.2120 - val_categorical_accuracy: 0.8229
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.924896 
+
+105000/105000 - 445s - loss: 0.1845 - categorical_accuracy: 0.8488 - val_loss: 0.2091 - val_categorical_accuracy: 0.8273
+-----------------------------------------------------------------------------------------------
+training(12/20): environment_noise
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.894697 
+
+105000/105000 - 446s - loss: 0.2657 - categorical_accuracy: 0.7791 - val_loss: 0.2210 - val_categorical_accuracy: 0.8155
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.916537 
+
+105000/105000 - 445s - loss: 0.2044 - categorical_accuracy: 0.8325 - val_loss: 0.2032 - val_categorical_accuracy: 0.8309
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.921528 
+
+105000/105000 - 446s - loss: 0.1758 - categorical_accuracy: 0.8567 - val_loss: 0.1998 - val_categorical_accuracy: 0.8321
+-----------------------------------------------------------------------------------------------
+training(13/20): environment_space
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.870782 
+
+105000/105000 - 447s - loss: 0.3389 - categorical_accuracy: 0.7038 - val_loss: 0.2782 - val_categorical_accuracy: 0.7567
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.891594 
+
+105000/105000 - 446s - loss: 0.2660 - categorical_accuracy: 0.7704 - val_loss: 0.2637 - val_categorical_accuracy: 0.7705
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.894917 
+
+105000/105000 - 446s - loss: 0.2357 - categorical_accuracy: 0.7980 - val_loss: 0.2588 - val_categorical_accuracy: 0.7756
+-----------------------------------------------------------------------------------------------
+training(14/20): environment_cleaness
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.886707 
+
+105000/105000 - 447s - loss: 0.2726 - categorical_accuracy: 0.7717 - val_loss: 0.2269 - val_categorical_accuracy: 0.8153
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.916866 
+
+105000/105000 - 446s - loss: 0.2118 - categorical_accuracy: 0.8303 - val_loss: 0.2046 - val_categorical_accuracy: 0.8335
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.921018 
+
+105000/105000 - 446s - loss: 0.1810 - categorical_accuracy: 0.8555 - val_loss: 0.2043 - val_categorical_accuracy: 0.8323
+-----------------------------------------------------------------------------------------------
+training(15/20): dish_portion
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.841954 
+
+105000/105000 - 447s - loss: 0.3824 - categorical_accuracy: 0.6647 - val_loss: 0.3262 - val_categorical_accuracy: 0.7271
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.862961 
+
+105000/105000 - 445s - loss: 0.3082 - categorical_accuracy: 0.7384 - val_loss: 0.3096 - val_categorical_accuracy: 0.7403
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.867294 
+
+105000/105000 - 445s - loss: 0.2755 - categorical_accuracy: 0.7665 - val_loss: 0.3063 - val_categorical_accuracy: 0.7433
+-----------------------------------------------------------------------------------------------
+training(16/20): dish_taste
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.862470 
+
+105000/105000 - 447s - loss: 0.3769 - categorical_accuracy: 0.6157 - val_loss: 0.3226 - val_categorical_accuracy: 0.6873
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.883088 
+
+105000/105000 - 446s - loss: 0.2999 - categorical_accuracy: 0.7198 - val_loss: 0.3039 - val_categorical_accuracy: 0.7101
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.886000 
+
+105000/105000 - 446s - loss: 0.2621 - categorical_accuracy: 0.7663 - val_loss: 0.3020 - val_categorical_accuracy: 0.7089
+-----------------------------------------------------------------------------------------------
+training(17/20): dish_look
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.757554 
+
+105000/105000 - 448s - loss: 0.3118 - categorical_accuracy: 0.7586 - val_loss: 0.2801 - val_categorical_accuracy: 0.7835
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.797624 
+
+105000/105000 - 447s - loss: 0.2620 - categorical_accuracy: 0.7953 - val_loss: 0.2708 - val_categorical_accuracy: 0.7880
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.810336 
+
+105000/105000 - 446s - loss: 0.2335 - categorical_accuracy: 0.8137 - val_loss: 0.2706 - val_categorical_accuracy: 0.7871
+-----------------------------------------------------------------------------------------------
+training(18/20): dish_recommendation
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.841455 
+
+105000/105000 - 448s - loss: 0.2150 - categorical_accuracy: 0.8406 - val_loss: 0.1878 - val_categorical_accuracy: 0.8655
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.862742 
+
+105000/105000 - 446s - loss: 0.1733 - categorical_accuracy: 0.8764 - val_loss: 0.1799 - val_categorical_accuracy: 0.8699
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.871318 
+
+105000/105000 - 446s - loss: 0.1489 - categorical_accuracy: 0.8925 - val_loss: 0.1797 - val_categorical_accuracy: 0.8709
+-----------------------------------------------------------------------------------------------
+training(19/20): others_overall_experience
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+
+ ROC-AUC - epoch: 1 - score: 0.787906 
+
+105000/105000 - 450s - loss: 0.3332 - categorical_accuracy: 0.7035 - val_loss: 0.2792 - val_categorical_accuracy: 0.7538
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.803116 
+
+105000/105000 - 446s - loss: 0.2624 - categorical_accuracy: 0.7721 - val_loss: 0.2646 - val_categorical_accuracy: 0.7695
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.803004 
+
+105000/105000 - 445s - loss: 0.2299 - categorical_accuracy: 0.8080 - val_loss: 0.2645 - val_categorical_accuracy: 0.7714
+-----------------------------------------------------------------------------------------------
+training(20/20): others_willing_to_consume_again
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/3
+Epoch 2/3
+
+ ROC-AUC - epoch: 2 - score: 0.851216 
+
+105000/105000 - 448s - loss: 0.2655 - categorical_accuracy: 0.7837 - val_loss: 0.2562 - val_categorical_accuracy: 0.7925
+Epoch 3/3
+
+ ROC-AUC - epoch: 3 - score: 0.861565 
+
+105000/105000 - 447s - loss: 0.2292 - categorical_accuracy: 0.8154 - val_loss: 0.2523 - val_categorical_accuracy: 0.7960
+-----------------------------------------------------------------------------------------------
