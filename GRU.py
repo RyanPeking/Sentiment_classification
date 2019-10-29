@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score
 from config import train_path, valid_path
 from keras.models import Model
@@ -92,7 +91,7 @@ def get_model():
     model = Model(inputs=inp, outputs=outp)
     model.compile(loss='binary_crossentropy',
                   optimizer='adam',
-                  metrics=['accuracy'])
+                  metrics=['categorical_accuracy'])
 
     return model
 
