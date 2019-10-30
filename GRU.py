@@ -1,5 +1,6 @@
 import pandas as pd
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, recall_score, precision_score, f1_score
+from sklearn.utils import class_weight
 from config import train_path, valid_path
 from keras.models import Model
 from keras.layers import Input, Dense, Embedding, SpatialDropout1D, concatenate
@@ -7,6 +8,8 @@ from keras.layers import GRU, Bidirectional, GlobalAveragePooling1D, GlobalMaxPo
 from keras.preprocessing import text, sequence
 from keras.callbacks import Callback
 import numpy as np
+import warnings
+warnings.filterwarnings('ignore')
 
 # 解决AlreadyExistsError的bug
 import tensorflow as tf
@@ -80,6 +83,30 @@ class RocAucEvaluation(Callback):
             print("\n ROC-AUC - epoch: %d - score: %.6f \n" % (epoch+1, score))
 
 
+class Metrics(Callback):
+    def on_train_begin(self, logs={}):
+        self.val_f1s = []
+        self.val_recalls = []
+        self.val_precisions = []
+
+    def on_epoch_end(self, epoch, logs={}):
+#         val_predict = (np.asarray(self.model.predict(self.validation_data[0]))).round()
+        val_predict = np.argmax(np.asarray(self.model.predict(self.validation_data[0])), axis=1)
+#         val_targ = self.validation_data[1]
+        val_targ = np.argmax(self.validation_data[1], axis=1)
+        _val_f1 = f1_score(val_targ, val_predict, average='macro')
+        _val_recall = recall_score(val_targ, val_predict, average='macro')
+        _val_precision = precision_score(val_targ, val_predict, average='macro')
+        self.val_f1s.append(_val_f1)
+        self.val_recalls.append(_val_recall)
+        self.val_precisions.append(_val_precision)
+        print('— val_f1: %f — val_precision: %f — val_recall %f' %(_val_f1, _val_precision, _val_recall))
+        # print(' — val_f1:' ,_val_f1)
+
+
+
+
+
 def get_model():
     inp = Input(shape=(maxlen,))
     x = Embedding(max_features, embed_size)(inp)
@@ -102,11 +129,19 @@ def train_model(i, category, category_num):
     print('training({}/{}): {}'.format(str(i+1), str(category_num), category))
     model = get_model()
     batch_size = 32
-    epochs = 1
+    epochs = 5
     X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, category)
     RocAuc = RocAucEvaluation(validation_data=(X_valid, y_valid), interval=1)
-    hist = model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, validation_data=(X_valid, y_valid),
-                     callbacks=[RocAuc], verbose=2)
+    metrics = Metrics()
+    class_weights = {
+        0: 1,
+        1: 5,
+        2: 5,
+        3: 0.5
+    }
+
+    hist = model.fit(X_train, y_train, class_weight=class_weights, batch_size=batch_size, epochs=epochs, validation_data=(X_valid, y_valid),
+                     callbacks=[metrics], verbose=2)
     print('-----------------------------------------------------------------------------------------------')
 
 

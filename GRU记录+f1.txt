@@ -1,0 +1,20 @@
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+ - 1836s - loss: 0.1138 - categorical_accuracy: 0.9279 - val_loss: 0.0944 - val_categorical_accuracy: 0.9381
+！ val_f1: 0.566273 ！ val_precision: 0.638641 ！ val_recall 0.538851
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+ - 1841s - loss: 0.1624 - categorical_accuracy: 0.8768 - val_loss: 0.1499 - val_categorical_accuracy: 0.8823
+！ val_f1: 0.429339 ！ val_precision: 0.657706 ！ val_recall 0.419601
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+ - 1924s - loss: 0.1606 - categorical_accuracy: 0.8866 - val_loss: 0.1386 - val_categorical_accuracy: 0.9005
+！ val_f1: 0.614522 ！ val_precision: 0.686022 ！ val_recall 0.591758
+-----------------------------------------------------------------------------------------------
+training(4/20): service_wait_time
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1

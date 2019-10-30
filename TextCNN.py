@@ -6,7 +6,7 @@ from keras.models import Model
 from keras.callbacks import Callback
 import numpy as np
 from keras.preprocessing import text, sequence
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, f1_score, recall_score, precision_score
 import pandas as pd
 from config import train_path, valid_path
 
@@ -75,6 +75,27 @@ class RocAucEvaluation(Callback):
             print("\n ROC-AUC - epoch: %d - score: %.6f \n" % (epoch+1, score))
 
 
+class Metrics(Callback):
+    def on_train_begin(self, logs={}):
+        self.val_f1s = []
+        self.val_recalls = []
+        self.val_precisions = []
+
+    def on_epoch_end(self, epoch, logs={}):
+#         val_predict = (np.asarray(self.model.predict(self.validation_data[0]))).round()
+        val_predict = np.argmax(np.asarray(self.model.predict(self.validation_data[0])), axis=1)
+#         val_targ = self.validation_data[1]
+        val_targ = np.argmax(self.validation_data[1], axis=1)
+        _val_f1 = f1_score(val_targ, val_predict, average='macro')
+        _val_recall = recall_score(val_targ, val_predict, average='macro')
+        _val_precision = precision_score(val_targ, val_predict, average='macro')
+        self.val_f1s.append(_val_f1)
+        self.val_recalls.append(_val_recall)
+        self.val_precisions.append(_val_precision)
+        print('— val_f1: %f — val_precision: %f — val_recall %f' %(_val_f1, _val_precision, _val_recall))
+        # print(' — val_f1:' ,_val_f1)
+
+
 def get_model():
     inputs = Input(shape=(maxlen,), dtype='int32')
     embedding = Embedding(input_dim=max_features, output_dim=embed_size, input_length=maxlen)(inputs)
@@ -113,8 +134,9 @@ def train_model(i, category, category_num):
     epochs = 3
     X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, category)
     RocAuc = RocAucEvaluation(validation_data=(X_valid, y_valid), interval=1)
+    metrics = Metrics()
     hist = model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, validation_data=(X_valid, y_valid),
-                     callbacks=[RocAuc], verbose=2)
+                     callbacks=[metrics], verbose=2)
     print('-----------------------------------------------------------------------------------------------')
 
 
