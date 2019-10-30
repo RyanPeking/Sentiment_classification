@@ -1,23 +1,32 @@
-from keras.layers import Input, Dense, Embedding, Conv2D, MaxPool2D
-from keras.layers import Reshape, Flatten, Dropout, Concatenate
-from keras.callbacks import ModelCheckpoint
-from keras.optimizers import Adam
+import pandas as pd
+from sklearn.metrics import roc_auc_score, recall_score, precision_score, f1_score
+from sklearn.utils import class_weight
+from config import train_path, valid_path
 from keras.models import Model
+from keras.layers import Input, Dense, Embedding, SpatialDropout1D, concatenate
+from keras.layers import GRU, Bidirectional, GlobalAveragePooling1D, GlobalMaxPooling1D
+from keras.preprocessing import text, sequence
 from keras.callbacks import Callback
 import numpy as np
-from keras.preprocessing import text, sequence
-from sklearn.metrics import roc_auc_score, f1_score, recall_score, precision_score
-import pandas as pd
-from config import train_path, valid_path
+import warnings
+warnings.filterwarnings('ignore')
+
+# 解决AlreadyExistsError的bug
+import tensorflow as tf
+from tensorflow.core.protobuf import rewriter_config_pb2
+from keras.backend import set_session
+tf.keras.backend.clear_session()  # For easy reset of notebook state.
+config_proto = tf.ConfigProto()
+off = rewriter_config_pb2.RewriterConfig.OFF
+config_proto.graph_options.rewrite_options.arithmetic_optimization = off
+session = tf.Session(config=config_proto)
+set_session(session)
+
 
 
 max_features = 50000
 maxlen = 260  # 根据fix_length计算得出长度为260大概能覆盖98%的数据
 embed_size = 300
-filter_sizes = [3, 4, 5]
-num_filters = 512
-drop = 0.5
-
 
 def reformat(labels):
     y = []
@@ -43,7 +52,6 @@ def tokenizer(X_train, X_valid):
 
 
 def get_data(train_path, valid_path, category):
-    # 放到服务器上跑需要改成这行
     # train = pd.read_csv(train_path, lineterminator='\n')
     train = pd.read_csv(train_path)
     X_train = train['content_cut_del_stopwords']
@@ -96,58 +104,54 @@ class Metrics(Callback):
         # print(' — val_f1:' ,_val_f1)
 
 
+
+
+
 def get_model():
-    inputs = Input(shape=(maxlen,), dtype='int32')
-    embedding = Embedding(input_dim=max_features, output_dim=embed_size, input_length=maxlen)(inputs)
-    reshape = Reshape((maxlen, embed_size, 1))(embedding)
+    inp = Input(shape=(maxlen,))
+    x = Embedding(max_features, embed_size)(inp)
+    x = SpatialDropout1D(0.2)(x)
+    x = Bidirectional(GRU(80, return_sequences=True))(x)
+    avg_pool = GlobalAveragePooling1D()(x)
+    max_pool = GlobalMaxPooling1D()(x)
+    conc = concatenate([avg_pool, max_pool])
+    outp = Dense(4, activation="sigmoid")(conc)
 
-    conv_0 = Conv2D(num_filters, kernel_size=(filter_sizes[0], embed_size), padding='valid',
-                    kernel_initializer='normal', activation='relu')(reshape)
-    conv_1 = Conv2D(num_filters, kernel_size=(filter_sizes[1], embed_size), padding='valid',
-                    kernel_initializer='normal', activation='relu')(reshape)
-    conv_2 = Conv2D(num_filters, kernel_size=(filter_sizes[2], embed_size), padding='valid',
-                    kernel_initializer='normal', activation='relu')(reshape)
-
-    maxpool_0 = MaxPool2D(pool_size=(maxlen - filter_sizes[0] + 1, 1), strides=(1, 1), padding='valid')(conv_0)
-    maxpool_1 = MaxPool2D(pool_size=(maxlen - filter_sizes[1] + 1, 1), strides=(1, 1), padding='valid')(conv_1)
-    maxpool_2 = MaxPool2D(pool_size=(maxlen - filter_sizes[2] + 1, 1), strides=(1, 1), padding='valid')(conv_2)
-
-    concatenated_tensor = Concatenate(axis=1)([maxpool_0, maxpool_1, maxpool_2])
-    flatten = Flatten()(concatenated_tensor)
-    dropout = Dropout(drop)(flatten)
-    output = Dense(units=4, activation='softmax')(dropout)
-
-    # this creates a model that includes
-    model = Model(inputs=inputs, outputs=output)
-
-    # checkpoint = ModelCheckpoint('weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc', verbose=1, save_best_only=True, mode='auto')
-    adam = Adam(lr=1e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
-
-    model.compile(optimizer=adam, loss='binary_crossentropy', metrics=['categorical_accuracy'])
+    model = Model(inputs=inp, outputs=outp)
+    model.compile(loss='binary_crossentropy',
+                  optimizer='adam',
+                  metrics=['categorical_accuracy'])
 
     return model
+
 
 def train_model(i, category, category_num):
     print('training({}/{}): {}'.format(str(i+1), str(category_num), category))
     model = get_model()
     batch_size = 32
-    epochs = 3
+    epochs = 5
     X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, category)
-    RocAuc = RocAucEvaluation(validation_data=(X_valid, y_valid), interval=1)
+    # RocAuc = RocAucEvaluation(validation_data=(X_valid, y_valid), interval=1)
     metrics = Metrics()
-    hist = model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, validation_data=(X_valid, y_valid),
+    class_weights = {
+        0: 1,
+        1: 5,
+        2: 5,
+        3: 0.5
+    }
+
+    model.fit(X_train, y_train, class_weight=class_weights, batch_size=batch_size, epochs=epochs, validation_data=(X_valid, y_valid),
                      callbacks=[metrics], verbose=2)
     print('-----------------------------------------------------------------------------------------------')
 
 
+
 if __name__ == '__main__':
     categories = ['location_traffic_convenience', 'location_distance_from_business_district', 'location_easy_to_find',
-                  'service_wait_time', 'service_waiters_attitude', 'service_parking_convenience',
-                  'service_serving_speed',
-                  'price_level', 'price_cost_effective', 'price_discount', 'environment_decoration',
-                  'environment_noise',
-                  'environment_space', 'environment_cleaness', 'dish_portion', 'dish_taste', 'dish_look',
-                  'dish_recommendation',
+                  'service_wait_time', 'service_waiters_attitude', 'service_parking_convenience', 'service_serving_speed',
+                  'price_level', 'price_cost_effective', 'price_discount', 'environment_decoration', 'environment_noise',
+                  'environment_space', 'environment_cleaness', 'dish_portion', 'dish_taste', 'dish_look', 'dish_recommendation',
                   'others_overall_experience', 'others_willing_to_consume_again']
     for i, category in enumerate(categories):
         train_model(i, category, len(categories))
+
