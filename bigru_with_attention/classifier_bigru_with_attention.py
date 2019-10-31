@@ -31,6 +31,7 @@ class TextClassifier():
         rmsprop = keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=1e-06)
         model = Model(inputs=inp, outputs=x)
         model.compile(
-            loss='categorical_crossentropy',
-            optimizer=adam)
+            loss='binary_crossentropy',
+            optimizer='adam',
+            metrics=['categorical_accuracy'])
         return model

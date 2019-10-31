@@ -58,7 +58,7 @@ data = pd.read_csv("../dataset/train_char.csv")
 validation = pd.read_csv("../dataset/valid_char.csv")
 # validation["content"] = validation.apply(lambda x: eval(x[1]), axis=1)
 
-model_dir = "model_bigru_char/"
+
 maxlen = 1200
 max_features = 20000
 batch_size = 128
@@ -136,7 +136,7 @@ input_validation = sequence.pad_sequences(list_tokenized_validation, maxlen=maxl
 
 print("model1")
 model1 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_ltc_{epoch:02d}.hdf5"
+file_path = "model_ltc_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -149,10 +149,10 @@ K.clear_session()
 
 print("model2")
 model2 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_ldfbd_{epoch:02d}.hdf5"
+file_path = "model_ldfbd_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
-callbacks_list = [checkpoint, metrics]
+callbacks_list = [metrics, checkpoint]
 history = model2.fit(input_train, Y_train_ldfbd, batch_size=batch_size, epochs=epochs,
                      validation_data=(input_validation, Y_validation_ldfbd), callbacks=callbacks_list, verbose=2)
 del model2
@@ -162,7 +162,7 @@ K.clear_session()
 
 print("model3")
 model3 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_letf_{epoch:02d}.hdf5"
+file_path = "model_letf_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -175,7 +175,7 @@ K.clear_session()
 
 print("model4")
 model4 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_swt_{epoch:02d}.hdf5"
+file_path = "model_swt_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -188,7 +188,7 @@ K.clear_session()
 
 print("model5")
 model5 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_swa_{epoch:02d}.hdf5"
+file_path = "model_swa_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -201,7 +201,7 @@ K.clear_session()
 
 print("model6")
 model6 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_spc_{epoch:02d}.hdf5"
+file_path = "model_spc_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -214,7 +214,7 @@ K.clear_session()
 
 print("model7")
 model7 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_ssp_{epoch:02d}.hdf5"
+file_path = "model_ssp_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -227,7 +227,7 @@ K.clear_session()
 
 print("model8")
 model8 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_pl_{epoch:02d}.hdf5"
+file_path = "model_pl_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -240,7 +240,7 @@ K.clear_session()
 
 print("model9")
 model9 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_pce_{epoch:02d}.hdf5"
+file_path = "model_pce_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -253,7 +253,7 @@ K.clear_session()
 
 print("model10")
 model10 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_pd_{epoch:02d}.hdf5"
+file_path = "model_pd_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -266,7 +266,7 @@ K.clear_session()
 
 print("model11")
 model11 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_ed_{epoch:02d}.hdf5"
+file_path = "model_ed_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -279,7 +279,7 @@ K.clear_session()
 
 print("model12")
 model12 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_en_{epoch:02d}.hdf5"
+file_path = "model_en_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -293,7 +293,7 @@ K.clear_session()
 
 print("model13")
 model13 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_es_{epoch:02d}.hdf5"
+file_path = "model_es_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -307,7 +307,7 @@ K.clear_session()
 
 print("model14")
 model14 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_ec_{epoch:02d}.hdf5"
+file_path = "model_ec_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -321,7 +321,7 @@ K.clear_session()
 
 print("model15")
 model15 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_dp_{epoch:02d}.hdf5"
+file_path = "model_dp_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -334,7 +334,7 @@ K.clear_session()
 
 print("model16")
 model16 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_dt_{epoch:02d}.hdf5"
+file_path = "model_dt_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -347,7 +347,7 @@ K.clear_session()
 
 print("model17")
 model17 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_dl_{epoch:02d}.hdf5"
+file_path = "model_dl_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -360,7 +360,7 @@ K.clear_session()
 
 print("model18")
 model18 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_dr_{epoch:02d}.hdf5"
+file_path = "model_dr_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -373,7 +373,7 @@ K.clear_session()
 
 print("model19")
 model19 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_ooe_{epoch:02d}.hdf5"
+file_path = "model_ooe_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
@@ -386,7 +386,7 @@ K.clear_session()
 
 print("model20")
 model20 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_owta_{epoch:02d}.hdf5"
+file_path = "model_owta_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]
