@@ -1,0 +1,116 @@
+class_weights = {
+        0: 1,
+        1: 5,
+        2: 5,
+        3: 0.5
+    }
+
+
+
+training(1/20): location_traffic_convenience
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 452s - loss: 0.2253 - categorical_accuracy: 0.9006 - val_loss: 0.1304 - val_categorical_accuracy: 0.9285
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+！ val_f1: 0.513469 ！ val_precision: 0.592813 ！ val_recall 0.499939
+Epoch 2/8
+ - 451s - loss: 0.1545 - categorical_accuracy: 0.9296 - val_loss: 0.1179 - val_categorical_accuracy: 0.9329
+！ val_f1: 0.600123 ！ val_precision: 0.604974 ！ val_recall 0.619846
+Epoch 3/8
+ - 451s - loss: 0.1238 - categorical_accuracy: 0.9344 - val_loss: 0.1216 - val_categorical_accuracy: 0.9286
+！ val_f1: 0.610940 ！ val_precision: 0.588535 ！ val_recall 0.651168
+Epoch 4/8
+ - 450s - loss: 0.0973 - categorical_accuracy: 0.9433 - val_loss: 0.1129 - val_categorical_accuracy: 0.9305
+！ val_f1: 0.617783 ！ val_precision: 0.610428 ！ val_recall 0.625963
+Epoch 5/8
+ - 451s - loss: 0.0719 - categorical_accuracy: 0.9560 - val_loss: 0.1143 - val_categorical_accuracy: 0.9306
+！ val_f1: 0.602008 ！ val_precision: 0.593760 ！ val_recall 0.616444
+Epoch 6/8
+ - 451s - loss: 0.0483 - categorical_accuracy: 0.9690 - val_loss: 0.1138 - val_categorical_accuracy: 0.9313
+！ val_f1: 0.612588 ！ val_precision: 0.613919 ！ val_recall 0.613337
+Epoch 7/8
+ - 451s - loss: 0.0297 - categorical_accuracy: 0.9801 - val_loss: 0.1221 - val_categorical_accuracy: 0.9300
+！ val_f1: 0.594769 ！ val_precision: 0.611547 ！ val_recall 0.584273
+Epoch 8/8
+ - 451s - loss: 0.0173 - categorical_accuracy: 0.9887 - val_loss: 0.1346 - val_categorical_accuracy: 0.9285
+！ val_f1: 0.580336 ！ val_precision: 0.600379 ！ val_recall 0.569788
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 452s - loss: 0.2129 - categorical_accuracy: 0.8443 - val_loss: 0.1778 - val_categorical_accuracy: 0.8730
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+！ val_f1: 0.464742 ！ val_precision: 0.510694 ！ val_recall 0.447376
+Epoch 2/8
+ - 450s - loss: 0.1559 - categorical_accuracy: 0.8797 - val_loss: 0.1724 - val_categorical_accuracy: 0.8748
+！ val_f1: 0.515606 ！ val_precision: 0.501175 ！ val_recall 0.533102
+Epoch 3/8
+ - 450s - loss: 0.1321 - categorical_accuracy: 0.8910 - val_loss: 0.1750 - val_categorical_accuracy: 0.8721
+！ val_f1: 0.516254 ！ val_precision: 0.489208 ！ val_recall 0.558146
+Epoch 4/8
+ - 450s - loss: 0.1097 - categorical_accuracy: 0.9062 - val_loss: 0.1695 - val_categorical_accuracy: 0.8731
+！ val_f1: 0.506637 ！ val_precision: 0.485973 ！ val_recall 0.538591
+Epoch 5/8
+ - 450s - loss: 0.0854 - categorical_accuracy: 0.9265 - val_loss: 0.1719 - val_categorical_accuracy: 0.8726
+！ val_f1: 0.513205 ！ val_precision: 0.498117 ！ val_recall 0.531799
+Epoch 6/8
+ - 450s - loss: 0.0613 - categorical_accuracy: 0.9488 - val_loss: 0.1801 - val_categorical_accuracy: 0.8729
+！ val_f1: 0.504146 ！ val_precision: 0.516485 ！ val_recall 0.496449
+Epoch 7/8
+ - 450s - loss: 0.0398 - categorical_accuracy: 0.9690 - val_loss: 0.1973 - val_categorical_accuracy: 0.8691
+！ val_f1: 0.485934 ！ val_precision: 0.513745 ！ val_recall 0.481256
+Epoch 8/8
+ - 450s - loss: 0.0237 - categorical_accuracy: 0.9826 - val_loss: 0.2213 - val_categorical_accuracy: 0.8663
+！ val_f1: 0.477952 ！ val_precision: 0.530100 ！ val_recall 0.462450
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 451s - loss: 0.3481 - categorical_accuracy: 0.8271 - val_loss: 0.2033 - val_categorical_accuracy: 0.8699
+！ val_f1: 0.564645 ！ val_precision: 0.611571 ！ val_recall 0.602028
+Epoch 2/8
+ - 450s - loss: 0.2475 - categorical_accuracy: 0.8658 - val_loss: 0.1878 - val_categorical_accuracy: 0.8741
+！ val_f1: 0.610996 ！ val_precision: 0.596689 ！ val_recall 0.647969
+Epoch 3/8
+ - 450s - loss: 0.2050 - categorical_accuracy: 0.8830 - val_loss: 0.1728 - val_categorical_accuracy: 0.8785
+！ val_f1: 0.630072 ！ val_precision: 0.616806 ！ val_recall 0.656596
+Epoch 4/8
+ - 450s - loss: 0.1675 - categorical_accuracy: 0.9007 - val_loss: 0.1715 - val_categorical_accuracy: 0.8787
+！ val_f1: 0.633074 ！ val_precision: 0.616551 ！ val_recall 0.659954
+Epoch 5/8
+ - 450s - loss: 0.1288 - categorical_accuracy: 0.9197 - val_loss: 0.1688 - val_categorical_accuracy: 0.8799
+！ val_f1: 0.624878 ！ val_precision: 0.612879 ！ val_recall 0.645127
+Epoch 6/8
+ - 450s - loss: 0.0921 - categorical_accuracy: 0.9394 - val_loss: 0.1704 - val_categorical_accuracy: 0.8801
+！ val_f1: 0.631977 ！ val_precision: 0.624024 ！ val_recall 0.642226
+Epoch 7/8
+ - 450s - loss: 0.0618 - categorical_accuracy: 0.9567 - val_loss: 0.1766 - val_categorical_accuracy: 0.8824
+！ val_f1: 0.625070 ！ val_precision: 0.630776 ！ val_recall 0.629215
+Epoch 8/8
+ - 450s - loss: 0.0392 - categorical_accuracy: 0.9723 - val_loss: 0.1874 - val_categorical_accuracy: 0.8811
+！ val_f1: 0.623692 ！ val_precision: 0.634128 ！ val_recall 0.620262
+-----------------------------------------------------------------------------------------------
+training(4/20): service_wait_time
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 452s - loss: 0.3316 - categorical_accuracy: 0.8722 - val_loss: 0.2211 - val_categorical_accuracy: 0.8703
+！ val_f1: 0.494065 ！ val_precision: 0.574991 ！ val_recall 0.521183
+Epoch 2/8
+ - 451s - loss: 0.2552 - categorical_accuracy: 0.8788 - val_loss: 0.1915 - val_categorical_accuracy: 0.8769
+！ val_f1: 0.530398 ！ val_precision: 0.587606 ！ val_recall 0.566949
+Epoch 3/8
+ - 450s - loss: 0.2141 - categorical_accuracy: 0.8887 - val_loss: 0.1819 - val_categorical_accuracy: 0.8767
+！ val_f1: 0.546890 ！ val_precision: 0.600906 ！ val_recall 0.581943
+Epoch 4/8
+ - 451s - loss: 0.1698 - categorical_accuracy: 0.9042 - val_loss: 0.1760 - val_categorical_accuracy: 0.8771
+！ val_f1: 0.541896 ！ val_precision: 0.603813 ！ val_recall 0.566822
+Epoch 5/8
+ - 450s - loss: 0.1256 - categorical_accuracy: 0.9236 - val_loss: 0.1611 - val_categorical_accuracy: 0.8877
+！ val_f1: 0.549003 ！ val_precision: 0.603935 ！ val_recall 0.554679
+Epoch 6/8

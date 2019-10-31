@@ -1,0 +1,57 @@
+class_weights = {
+        0: 1,
+        1: 5,
+        2: 5,
+        3: 0.25
+    }
+
+training(1/20): location_traffic_convenience
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 451s - loss: 0.1946 - categorical_accuracy: 0.8599 - val_loss: 0.1836 - val_categorical_accuracy: 0.9205
+！ val_f1: 0.547312 ！ val_precision: 0.636552 ！ val_recall 0.544466
+Epoch 2/5
+ - 450s - loss: 0.1326 - categorical_accuracy: 0.9178 - val_loss: 0.1369 - val_categorical_accuracy: 0.9260
+！ val_f1: 0.602971 ！ val_precision: 0.581714 ！ val_recall 0.641190
+Epoch 3/5
+ - 450s - loss: 0.1047 - categorical_accuracy: 0.9225 - val_loss: 0.1314 - val_categorical_accuracy: 0.9238
+！ val_f1: 0.599309 ！ val_precision: 0.580937 ！ val_recall 0.644525
+Epoch 4/5
+ - 450s - loss: 0.0811 - categorical_accuracy: 0.9353 - val_loss: 0.1333 - val_categorical_accuracy: 0.9209
+！ val_f1: 0.604050 ！ val_precision: 0.577897 ！ val_recall 0.641425
+Epoch 5/5
+ - 450s - loss: 0.0587 - categorical_accuracy: 0.9481 - val_loss: 0.1249 - val_categorical_accuracy: 0.9247
+！ val_f1: 0.601575 ！ val_precision: 0.577868 ！ val_recall 0.639172
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 452s - loss: 0.1700 - categorical_accuracy: 0.7571 - val_loss: 0.2263 - val_categorical_accuracy: 0.8493
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+！ val_f1: 0.456166 ！ val_precision: 0.488829 ！ val_recall 0.456848
+Epoch 2/5
+ - 450s - loss: 0.1246 - categorical_accuracy: 0.8533 - val_loss: 0.2257 - val_categorical_accuracy: 0.8435
+！ val_f1: 0.511453 ！ val_precision: 0.477469 ！ val_recall 0.569064
+Epoch 3/5
+ - 450s - loss: 0.1034 - categorical_accuracy: 0.8695 - val_loss: 0.2033 - val_categorical_accuracy: 0.8551
+！ val_f1: 0.499433 ！ val_precision: 0.459846 ！ val_recall 0.585464
+Epoch 4/5
+ - 450s - loss: 0.0847 - categorical_accuracy: 0.8888 - val_loss: 0.1986 - val_categorical_accuracy: 0.8571
+！ val_f1: 0.519976 ！ val_precision: 0.520521 ！ val_recall 0.576298
+Epoch 5/5
+ - 450s - loss: 0.0648 - categorical_accuracy: 0.9118 - val_loss: 0.1981 - val_categorical_accuracy: 0.8583
+！ val_f1: 0.506334 ！ val_precision: 0.473334 ！ val_recall 0.561182
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+
+
+
+
+
+
+

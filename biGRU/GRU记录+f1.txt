@@ -1,0 +1,172 @@
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+ - 1836s - loss: 0.1138 - categorical_accuracy: 0.9279 - val_loss: 0.0944 - val_categorical_accuracy: 0.9381
+！ val_f1: 0.566273 ！ val_precision: 0.638641 ！ val_recall 0.538851
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+ - 1841s - loss: 0.1624 - categorical_accuracy: 0.8768 - val_loss: 0.1499 - val_categorical_accuracy: 0.8823
+！ val_f1: 0.429339 ！ val_precision: 0.657706 ！ val_recall 0.419601
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+ - 1924s - loss: 0.1606 - categorical_accuracy: 0.8866 - val_loss: 0.1386 - val_categorical_accuracy: 0.9005
+！ val_f1: 0.614522 ！ val_precision: 0.686022 ！ val_recall 0.591758
+-----------------------------------------------------------------------------------------------
+training(4/20): service_wait_time
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+
+
+
+class_weights = {
+        0: 1,
+        1: 5,
+        2: 5,
+        3: 0.25
+    }
+
+
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+ - 1806s - loss: 0.1490 - categorical_accuracy: 0.9006 - val_loss: 0.1883 - val_categorical_accuracy: 0.8879
+！ val_f1: 0.562833 ！ val_precision: 0.519981 ！ val_recall 0.665039
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+ - 1778s - loss: 0.1365 - categorical_accuracy: 0.8290 - val_loss: 0.2375 - val_categorical_accuracy: 0.8182
+！ val_f1: 0.466960 ！ val_precision: 0.426886 ！ val_recall 0.593970
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/1
+
+
+
+
+class_weights = {
+        0: 1,
+        1: 5,
+        2: 5,
+        3: 0.5
+    }
+
+training(1/20): location_traffic_convenience
+WARNING:tensorflow:From C:\Users\Ryan Wu\Anaconda3\envs\ai\lib\site-packages\tensorflow\python\ops\nn_impl.py:180: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From C:\Users\Ryan Wu\Anaconda3\envs\ai\lib\site-packages\keras\backend\tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 1789s - loss: 0.1722 - categorical_accuracy: 0.9180 - val_loss: 0.1286 - val_categorical_accuracy: 0.9199
+！ val_f1: 0.566139 ！ val_precision: 0.528375 ！ val_recall 0.645473
+Epoch 2/5
+ - 1784s - loss: 0.1240 - categorical_accuracy: 0.9303 - val_loss: 0.1126 - val_categorical_accuracy: 0.9227
+！ val_f1: 0.589928 ！ val_precision: 0.562447 ！ val_recall 0.648209
+Epoch 3/5
+ - 1804s - loss: 0.0751 - categorical_accuracy: 0.9532 - val_loss: 0.1207 - val_categorical_accuracy: 0.9201
+！ val_f1: 0.579740 ！ val_precision: 0.563640 ！ val_recall 0.602424
+Epoch 4/5
+ - 1729s - loss: 0.0315 - categorical_accuracy: 0.9778 - val_loss: 0.1595 - val_categorical_accuracy: 0.9075
+！ val_f1: 0.559938 ！ val_precision: 0.540554 ！ val_recall 0.593019
+Epoch 5/5
+ - 1667s - loss: 0.0123 - categorical_accuracy: 0.9916 - val_loss: 0.1775 - val_categorical_accuracy: 0.9170
+！ val_f1: 0.566142 ！ val_precision: 0.551517 ！ val_recall 0.587421
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 1655s - loss: 0.1703 - categorical_accuracy: 0.8638 - val_loss: 0.1780 - val_categorical_accuracy: 0.8665
+！ val_f1: 0.486768 ！ val_precision: 0.454847 ！ val_recall 0.592057
+Epoch 2/5
+ - 1663s - loss: 0.1327 - categorical_accuracy: 0.8856 - val_loss: 0.1723 - val_categorical_accuracy: 0.8644
+！ val_f1: 0.512019 ！ val_precision: 0.484212 ！ val_recall 0.553328
+Epoch 3/5
+ - 1731s - loss: 0.0903 - categorical_accuracy: 0.9201 - val_loss: 0.1938 - val_categorical_accuracy: 0.8521
+！ val_f1: 0.509982 ！ val_precision: 0.494380 ！ val_recall 0.531014
+Epoch 4/5
+ - 1701s - loss: 0.0466 - categorical_accuracy: 0.9609 - val_loss: 0.2392 - val_categorical_accuracy: 0.8544
+！ val_f1: 0.483723 ！ val_precision: 0.476254 ！ val_recall 0.497768
+Epoch 5/5
+ - 1756s - loss: 0.0189 - categorical_accuracy: 0.9849 - val_loss: 0.3082 - val_categorical_accuracy: 0.8540
+！ val_f1: 0.494773 ！ val_precision: 0.496396 ！ val_recall 0.497552
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 1888s - loss: 0.2740 - categorical_accuracy: 0.8568 - val_loss: 0.1938 - val_categorical_accuracy: 0.8645
+！ val_f1: 0.593942 ！ val_precision: 0.587249 ！ val_recall 0.652073
+Epoch 2/5
+ - 1869s - loss: 0.2028 - categorical_accuracy: 0.8809 - val_loss: 0.1770 - val_categorical_accuracy: 0.8661
+！ val_f1: 0.622924 ！ val_precision: 0.594998 ！ val_recall 0.662739
+Epoch 3/5
+ - 1871s - loss: 0.1296 - categorical_accuracy: 0.9152 - val_loss: 0.1905 - val_categorical_accuracy: 0.8555
+！ val_f1: 0.599934 ！ val_precision: 0.575670 ！ val_recall 0.634452
+Epoch 4/5
+ - 1874s - loss: 0.0657 - categorical_accuracy: 0.9538 - val_loss: 0.2248 - val_categorical_accuracy: 0.8554
+！ val_f1: 0.598809 ！ val_precision: 0.575358 ！ val_recall 0.632813
+Epoch 5/5
+ - 1879s - loss: 0.0300 - categorical_accuracy: 0.9787 - val_loss: 0.2632 - val_categorical_accuracy: 0.8670
+！ val_f1: 0.602039 ！ val_precision: 0.596636 ！ val_recall 0.610566
+-----------------------------------------------------------------------------------------------
+training(4/20): service_wait_time
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 1885s - loss: 0.2811 - categorical_accuracy: 0.8674 - val_loss: 0.1833 - val_categorical_accuracy: 0.8777
+！ val_f1: 0.551681 ！ val_precision: 0.597809 ！ val_recall 0.588190
+Epoch 2/5
+ - 1891s - loss: 0.2221 - categorical_accuracy: 0.8814 - val_loss: 0.1780 - val_categorical_accuracy: 0.8696
+！ val_f1: 0.537527 ！ val_precision: 0.570198 ！ val_recall 0.590972
+Epoch 3/5
+ - 1892s - loss: 0.1435 - categorical_accuracy: 0.9128 - val_loss: 0.1876 - val_categorical_accuracy: 0.8647
+！ val_f1: 0.525928 ！ val_precision: 0.537450 ！ val_recall 0.569703
+Epoch 4/5
+ - 1891s - loss: 0.0720 - categorical_accuracy: 0.9497 - val_loss: 0.1937 - val_categorical_accuracy: 0.8808
+！ val_f1: 0.519385 ！ val_precision: 0.529321 ！ val_recall 0.532108
+Epoch 5/5
+ - 1891s - loss: 0.0348 - categorical_accuracy: 0.9753 - val_loss: 0.2422 - val_categorical_accuracy: 0.8790
+！ val_f1: 0.511328 ！ val_precision: 0.507515 ！ val_recall 0.520879
+-----------------------------------------------------------------------------------------------
+training(5/20): service_waiters_attitude
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 1922s - loss: 0.5518 - categorical_accuracy: 0.7138 - val_loss: 0.2815 - val_categorical_accuracy: 0.7621
+！ val_f1: 0.704870 ！ val_precision: 0.707838 ！ val_recall 0.736428
+Epoch 2/5
+ - 1932s - loss: 0.4067 - categorical_accuracy: 0.7953 - val_loss: 0.2474 - val_categorical_accuracy: 0.7851
+！ val_f1: 0.717156 ！ val_precision: 0.711504 ！ val_recall 0.740252
+Epoch 3/5
+ - 1941s - loss: 0.2656 - categorical_accuracy: 0.8542 - val_loss: 0.2995 - val_categorical_accuracy: 0.7593
+！ val_f1: 0.689717 ！ val_precision: 0.684842 ！ val_recall 0.719926
+Epoch 4/5
+ - 1936s - loss: 0.1378 - categorical_accuracy: 0.9131 - val_loss: 0.3407 - val_categorical_accuracy: 0.7703
+！ val_f1: 0.688281 ！ val_precision: 0.678436 ！ val_recall 0.711169
+Epoch 5/5
+ - 1936s - loss: 0.0745 - categorical_accuracy: 0.9506 - val_loss: 0.3864 - val_categorical_accuracy: 0.7775
+！ val_f1: 0.684350 ！ val_precision: 0.683695 ！ val_recall 0.687219
+-----------------------------------------------------------------------------------------------
+training(6/20): service_parking_convenience
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 1942s - loss: 0.1051 - categorical_accuracy: 0.9496 - val_loss: 0.0499 - val_categorical_accuracy: 0.9584
+！ val_f1: 0.589485 ！ val_precision: 0.647833 ！ val_recall 0.654579
+Epoch 2/5
+ - 1947s - loss: 0.0733 - categorical_accuracy: 0.9665 - val_loss: 0.0484 - val_categorical_accuracy: 0.9601
+！ val_f1: 0.602595 ！ val_precision: 0.651529 ！ val_recall 0.648969
+Epoch 3/5
+ - 1946s - loss: 0.0394 - categorical_accuracy: 0.9818 - val_loss: 0.0560 - val_categorical_accuracy: 0.9611
+！ val_f1: 0.605038 ！ val_precision: 0.626725 ！ val_recall 0.637229
+Epoch 4/5
+ - 1948s - loss: 0.0132 - categorical_accuracy: 0.9930 - val_loss: 0.0636 - val_categorical_accuracy: 0.9649
+！ val_f1: 0.626282 ！ val_precision: 0.624220 ！ val_recall 0.638269
+Epoch 5/5
+ - 1952s - loss: 0.0051 - categorical_accuracy: 0.9969 - val_loss: 0.1013 - val_categorical_accuracy: 0.9568
+！ val_f1: 0.570138 ！ val_precision: 0.636734 ！ val_recall 0.591173
+-----------------------------------------------------------------------------------------------
+training(7/20): service_serving_speed
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
