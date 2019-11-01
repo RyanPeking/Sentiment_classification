@@ -25,10 +25,10 @@ class TextClassifier():
         max_pool_3 = GlobalMaxPooling1D()(x_3)
         attention_3 = attention(x_3)
         x = keras.layers.concatenate([avg_pool_3, max_pool_3, attention_3], name="fc")
-        x = Dense(num_class, activation="sigmoid")(x)
+        x = Dense(num_class, activation="softmax")(x)
 
-        adam = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08,amsgrad=True)
-        rmsprop = keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=1e-06)
+        # adam = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08,amsgrad=True)
+        # rmsprop = keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=1e-06)
         model = Model(inputs=inp, outputs=x)
         model.compile(
             loss='binary_crossentropy',

@@ -1,6 +1,5 @@
 import pandas as pd
 from sklearn.metrics import roc_auc_score, recall_score, precision_score, f1_score
-from config import train_path, valid_path
 from keras.models import Model
 from keras.layers import Input, Dense, Embedding, SpatialDropout1D, concatenate
 from keras.layers import GRU, Bidirectional, GlobalAveragePooling1D, GlobalMaxPooling1D
@@ -22,7 +21,8 @@ session = tf.Session(config=config_proto)
 set_session(session)
 
 
-
+train_path = '../dataset/train.csv'
+valid_path = '../dataset/valid.csv'
 max_features = 50000
 maxlen = 260  # 根据fix_length计算得出长度为260大概能覆盖98%的数据
 embed_size = 300
