@@ -1,0 +1,245 @@
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+/usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:80: DeprecationWarning: Call to deprecated `__contains__` (Method will be removed in 4.0.0, use self.wv.__contains__() instead).
+/usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:81: DeprecationWarning: Call to deprecated `__getitem__` (Method will be removed in 4.0.0, use self.wv.__getitem__() instead).
+model1
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3657: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/nn_impl.py:183: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/15
+ - 821s - loss: 0.1183 - categorical_accuracy: 0.9225 - val_loss: 0.1016 - val_categorical_accuracy: 0.9367
+
+Epoch 00001: saving model to model_ltc_01.hdf5
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+0.5346006613688044 0.5628477733666584 0.5225576252445352
+max f1
+0.5346006613688044
+Epoch 2/15
+ - 819s - loss: 0.0988 - categorical_accuracy: 0.9352 - val_loss: 0.0973 - val_categorical_accuracy: 0.9383
+
+Epoch 00002: saving model to model_ltc_02.hdf5
+0.5063455596966465 0.6421609566304401 0.49478721628142625
+max f1
+0.5346006613688044
+Epoch 3/15
+ - 820s - loss: 0.0937 - categorical_accuracy: 0.9372 - val_loss: 0.0930 - val_categorical_accuracy: 0.9391
+
+Epoch 00003: saving model to model_ltc_03.hdf5
+0.5772579703248905 0.6750802621270995 0.5694915239536842
+max f1
+0.5772579703248905
+Epoch 4/15
+ - 813s - loss: 0.0909 - categorical_accuracy: 0.9388 - val_loss: 0.0942 - val_categorical_accuracy: 0.9399
+
+Epoch 00004: saving model to model_ltc_04.hdf5
+0.5934290573908673 0.6307061477323088 0.5820468903697856
+max f1
+0.5934290573908673
+Epoch 5/15
+ - 814s - loss: 0.0880 - categorical_accuracy: 0.9406 - val_loss: 0.0903 - val_categorical_accuracy: 0.9401
+
+Epoch 00005: saving model to model_ltc_05.hdf5
+0.5737049230948172 0.6615477089006686 0.5399680181773641
+max f1
+0.5934290573908673
+Epoch 6/15
+ - 817s - loss: 0.0854 - categorical_accuracy: 0.9421 - val_loss: 0.0928 - val_categorical_accuracy: 0.9409
+
+Epoch 00006: saving model to model_ltc_06.hdf5
+0.597303627587867 0.661963217079963 0.578816278394033
+max f1
+0.597303627587867
+Epoch 7/15
+ - 823s - loss: 0.0829 - categorical_accuracy: 0.9438 - val_loss: 0.0884 - val_categorical_accuracy: 0.9415
+
+Epoch 00007: saving model to model_ltc_07.hdf5
+0.5593873234226027 0.652089890251056 0.5320066413647458
+max f1
+0.597303627587867
+Epoch 8/15
+ - 820s - loss: 0.0800 - categorical_accuracy: 0.9452 - val_loss: 0.0940 - val_categorical_accuracy: 0.9385
+
+Epoch 00008: saving model to model_ltc_08.hdf5
+0.5869309023088076 0.6564241683605584 0.5676333784343031
+max f1
+0.597303627587867
+Epoch 9/15
+ - 820s - loss: 0.0773 - categorical_accuracy: 0.9473 - val_loss: 0.0913 - val_categorical_accuracy: 0.9395
+
+Epoch 00009: saving model to model_ltc_09.hdf5
+0.5770595448493856 0.6440164255277543 0.5524833292134187
+max f1
+0.597303627587867
+Epoch 10/15
+ - 818s - loss: 0.0754 - categorical_accuracy: 0.9477 - val_loss: 0.0924 - val_categorical_accuracy: 0.9377
+
+Epoch 00010: saving model to model_ltc_10.hdf5
+0.584669077360414 0.6225995974770051 0.5784357032702574
+max f1
+0.597303627587867
+Epoch 11/15
+ - 819s - loss: 0.0794 - categorical_accuracy: 0.9457 - val_loss: 0.0942 - val_categorical_accuracy: 0.9389
+
+Epoch 00011: saving model to model_ltc_11.hdf5
+0.5631236654277292 0.683790699939089 0.5329144363825705
+max f1
+0.597303627587867
+Epoch 12/15
+ - 817s - loss: 0.0784 - categorical_accuracy: 0.9465 - val_loss: 0.0939 - val_categorical_accuracy: 0.9376
+
+Epoch 00012: saving model to model_ltc_12.hdf5
+0.5915588913738423 0.6233386558627099 0.5689119764929546
+max f1
+0.597303627587867
+Epoch 13/15
+ - 814s - loss: 0.0764 - categorical_accuracy: 0.9474 - val_loss: 0.0988 - val_categorical_accuracy: 0.9359
+
+Epoch 00013: saving model to model_ltc_13.hdf5
+0.5773127967913745 0.6386288199009508 0.547881549457019
+max f1
+0.597303627587867
+Epoch 14/15
+ - 817s - loss: 0.0755 - categorical_accuracy: 0.9483 - val_loss: 0.1000 - val_categorical_accuracy: 0.9346
+
+Epoch 00014: saving model to model_ltc_14.hdf5
+0.5860693854517753 0.6383712529509611 0.5576401599595354
+max f1
+0.597303627587867
+Epoch 15/15
+ - 816s - loss: 0.0729 - categorical_accuracy: 0.9495 - val_loss: 0.0967 - val_categorical_accuracy: 0.9390
+
+Epoch 00015: saving model to model_ltc_15.hdf5
+0.5819702244514507 0.6853160559636667 0.5611957666749743
+max f1
+0.597303627587867
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:107: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+model2
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/15
+ - 816s - loss: 0.1649 - categorical_accuracy: 0.8723 - val_loss: 0.1483 - val_categorical_accuracy: 0.8843
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+0.4068288973882609 0.4128755173775774 0.4020652307451751
+max f1
+0.4068288973882609
+
+Epoch 00001: saving model to model_ldfbd_01.hdf5
+Epoch 2/15
+ - 812s - loss: 0.1448 - categorical_accuracy: 0.8857 - val_loss: 0.1518 - val_categorical_accuracy: 0.8813
+0.5132318531236263 0.507660722100767 0.5193013406285223
+max f1
+0.5132318531236263
+
+Epoch 00002: saving model to model_ldfbd_02.hdf5
+Epoch 3/15
+ - 809s - loss: 0.1393 - categorical_accuracy: 0.8903 - val_loss: 0.1444 - val_categorical_accuracy: 0.8867
+0.4160531128453454 0.463010156135625 0.4117209028775831
+max f1
+0.5132318531236263
+
+Epoch 00003: saving model to model_ldfbd_03.hdf5
+Epoch 4/15
+ - 809s - loss: 0.1356 - categorical_accuracy: 0.8922 - val_loss: 0.1448 - val_categorical_accuracy: 0.8827
+0.4895487331075377 0.509867940428883 0.47841759266476225
+max f1
+0.5132318531236263
+
+Epoch 00004: saving model to model_ldfbd_04.hdf5
+Epoch 5/15
+ - 808s - loss: 0.1330 - categorical_accuracy: 0.8934 - val_loss: 0.1438 - val_categorical_accuracy: 0.8851
+0.5035471998664873 0.5032209120224945 0.5085824931863058
+max f1
+0.5132318531236263
+
+Epoch 00005: saving model to model_ldfbd_05.hdf5
+Epoch 6/15
+ - 805s - loss: 0.1291 - categorical_accuracy: 0.8960 - val_loss: 0.1411 - val_categorical_accuracy: 0.8853
+0.505209238529825 0.5190264802722921 0.49352869619806106
+max f1
+0.5132318531236263
+
+Epoch 00006: saving model to model_ldfbd_06.hdf5
+Epoch 7/15
+ - 804s - loss: 0.1270 - categorical_accuracy: 0.8985 - val_loss: 0.1428 - val_categorical_accuracy: 0.8862
+0.5037136315693846 0.5166220131483558 0.4940514672202324
+max f1
+0.5132318531236263
+
+Epoch 00007: saving model to model_ldfbd_07.hdf5
+Epoch 8/15
+ - 802s - loss: 0.1235 - categorical_accuracy: 0.9015 - val_loss: 0.1463 - val_categorical_accuracy: 0.8813
+0.5079450125030722 0.519945089554481 0.5000372550465589
+max f1
+0.5132318531236263
+
+Epoch 00008: saving model to model_ldfbd_08.hdf5
+Epoch 9/15
+ - 803s - loss: 0.1209 - categorical_accuracy: 0.9020 - val_loss: 0.1459 - val_categorical_accuracy: 0.8805
+0.513198143152864 0.5022397216706637 0.5255401432227638
+max f1
+0.5132318531236263
+
+Epoch 00009: saving model to model_ldfbd_09.hdf5
+Epoch 10/15
+ - 800s - loss: 0.1189 - categorical_accuracy: 0.9045 - val_loss: 0.1474 - val_categorical_accuracy: 0.8810
+0.5097666859199266 0.5050336026476825 0.5148155104377367
+max f1
+0.5132318531236263
+
+Epoch 00010: saving model to model_ldfbd_10.hdf5
+Epoch 11/15
+ - 801s - loss: 0.1161 - categorical_accuracy: 0.9062 - val_loss: 0.1479 - val_categorical_accuracy: 0.8802
+0.4402269425155336 0.4977307805552702 0.43008745336609056
+max f1
+0.5132318531236263
+
+Epoch 00011: saving model to model_ldfbd_11.hdf5
+Epoch 12/15
+ - 804s - loss: 0.1141 - categorical_accuracy: 0.9087 - val_loss: 0.1450 - val_categorical_accuracy: 0.8834
+0.47941679069192467 0.5118429660498504 0.4602743457153201
+max f1
+0.5132318531236263
+
+Epoch 00012: saving model to model_ldfbd_12.hdf5
+Epoch 13/15
+ - 803s - loss: 0.1121 - categorical_accuracy: 0.9095 - val_loss: 0.1461 - val_categorical_accuracy: 0.8837
+0.4750686294393685 0.5340501735984116 0.44668343614074646
+max f1
+0.5132318531236263
+
+Epoch 00013: saving model to model_ldfbd_13.hdf5
+Epoch 14/15
