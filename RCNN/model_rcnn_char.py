@@ -54,11 +54,11 @@ class Metrics(Callback):
         return
 
 
-data = pd.read_csv("preprocess/train_char.csv")
-data["content"] = data.apply(lambda x: eval(x[1]), axis=1)
+data = pd.read_csv("../dataset/train_char.csv")
+# data["content"] = data.apply(lambda x: eval(x[1]), axis=1)
 
-validation = pd.read_csv("preprocess/validation_char.csv")
-validation["content"] = validation.apply(lambda x: eval(x[1]), axis=1)
+validation = pd.read_csv("../dataset/valid_char.csv")
+# validation["content"] = validation.apply(lambda x: eval(x[1]), axis=1)
 
 model_dir = "ckpt/"
 maxlen = 1000
@@ -137,7 +137,7 @@ input_validation = sequence.pad_sequences(list_tokenized_validation, maxlen=maxl
 
 print("model1")
 model1 = TextClassifier().model(embeddings_matrix, maxlen, word_index, 4)
-file_path = model_dir + "model_ltc_{epoch:02d}.hdf5"
+file_path = "model_ltc_{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
 metrics = Metrics()
 callbacks_list = [checkpoint, metrics]

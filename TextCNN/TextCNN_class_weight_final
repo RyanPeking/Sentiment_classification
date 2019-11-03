@@ -1,0 +1,256 @@
+training(1/20): location_traffic_convenience
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 447s - loss: 0.1778 - categorical_accuracy: 0.9009 - val_loss: 0.1202 - val_categorical_accuracy: 0.9330
+
+Epoch 00001: saving model to textcnn_model_location_traffic_convenience_01.hdf5
+— val_f1: 0.484026 — val_precision: 0.713415 — val_recall 0.477040
+Epoch 2/5
+ - 446s - loss: 0.1214 - categorical_accuracy: 0.9326 - val_loss: 0.1137 - val_categorical_accuracy: 0.9336
+
+Epoch 00002: saving model to textcnn_model_location_traffic_convenience_02.hdf5
+— val_f1: 0.591869 — val_precision: 0.578685 — val_recall 0.606521
+Epoch 3/5
+ - 446s - loss: 0.0988 - categorical_accuracy: 0.9391 - val_loss: 0.1104 - val_categorical_accuracy: 0.9335
+
+Epoch 00003: saving model to textcnn_model_location_traffic_convenience_03.hdf5
+— val_f1: 0.603791 — val_precision: 0.610080 — val_recall 0.618582
+Epoch 4/5
+ - 446s - loss: 0.0796 - categorical_accuracy: 0.9478 - val_loss: 0.1048 - val_categorical_accuracy: 0.9351
+
+Epoch 00004: saving model to textcnn_model_location_traffic_convenience_04.hdf5
+— val_f1: 0.600227 — val_precision: 0.598561 — val_recall 0.611262
+Epoch 5/5
+ - 446s - loss: 0.0598 - categorical_accuracy: 0.9599 - val_loss: 0.1095 - val_categorical_accuracy: 0.9327
+
+Epoch 00005: saving model to textcnn_model_location_traffic_convenience_05.hdf5
+— val_f1: 0.602547 — val_precision: 0.602993 — val_recall 0.611803
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 448s - loss: 0.1849 - categorical_accuracy: 0.8445 - val_loss: 0.1717 - val_categorical_accuracy: 0.8753
+
+Epoch 00001: saving model to textcnn_model_location_distance_from_business_district_01.hdf5
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+— val_f1: 0.424106 — val_precision: 0.543396 — val_recall 0.417605
+Epoch 2/5
+ - 446s - loss: 0.1345 - categorical_accuracy: 0.8819 - val_loss: 0.1689 - val_categorical_accuracy: 0.8739
+
+Epoch 00002: saving model to textcnn_model_location_distance_from_business_district_02.hdf5
+— val_f1: 0.517113 — val_precision: 0.511349 — val_recall 0.523312
+Epoch 3/5
+ - 446s - loss: 0.1154 - categorical_accuracy: 0.8949 - val_loss: 0.1702 - val_categorical_accuracy: 0.8705
+
+Epoch 00003: saving model to textcnn_model_location_distance_from_business_district_03.hdf5
+— val_f1: 0.519125 — val_precision: 0.506865 — val_recall 0.533109
+Epoch 4/5
+ - 446s - loss: 0.0962 - categorical_accuracy: 0.9120 - val_loss: 0.1669 - val_categorical_accuracy: 0.8738
+
+Epoch 00004: saving model to textcnn_model_location_distance_from_business_district_04.hdf5
+— val_f1: 0.512725 — val_precision: 0.502830 — val_recall 0.523765
+Epoch 5/5
+ - 446s - loss: 0.0755 - categorical_accuracy: 0.9342 - val_loss: 0.1754 - val_categorical_accuracy: 0.8697
+
+Epoch 00005: saving model to textcnn_model_location_distance_from_business_district_05.hdf5
+— val_f1: 0.498131 — val_precision: 0.487546 — val_recall 0.510214
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 446s - loss: 0.2624 - categorical_accuracy: 0.8474 - val_loss: 0.1820 - val_categorical_accuracy: 0.8778
+
+Epoch 00001: saving model to textcnn_model_location_easy_to_find_01.hdf5
+— val_f1: 0.568462 — val_precision: 0.635604 — val_recall 0.593630
+Epoch 2/5
+ - 445s - loss: 0.1883 - categorical_accuracy: 0.8813 - val_loss: 0.1654 - val_categorical_accuracy: 0.8859
+
+Epoch 00002: saving model to textcnn_model_location_easy_to_find_02.hdf5
+— val_f1: 0.609792 — val_precision: 0.637309 — val_recall 0.627854
+Epoch 3/5
+ - 445s - loss: 0.1581 - categorical_accuracy: 0.8947 - val_loss: 0.1621 - val_categorical_accuracy: 0.8871
+
+Epoch 00003: saving model to textcnn_model_location_easy_to_find_03.hdf5
+— val_f1: 0.635595 — val_precision: 0.632485 — val_recall 0.648447
+Epoch 4/5
+ - 445s - loss: 0.1305 - categorical_accuracy: 0.9123 - val_loss: 0.1651 - val_categorical_accuracy: 0.8842
+
+Epoch 00004: saving model to textcnn_model_location_easy_to_find_04.hdf5
+— val_f1: 0.634786 — val_precision: 0.636831 — val_recall 0.647657
+Epoch 5/5
+ - 445s - loss: 0.1019 - categorical_accuracy: 0.9312 - val_loss: 0.1647 - val_categorical_accuracy: 0.8819
+
+Epoch 00005: saving model to textcnn_model_location_easy_to_find_05.hdf5
+— val_f1: 0.631303 — val_precision: 0.624622 — val_recall 0.641499
+-----------------------------------------------------------------------------------------------
+training(4/20): service_wait_time
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 447s - loss: 0.2448 - categorical_accuracy: 0.8775 - val_loss: 0.1632 - val_categorical_accuracy: 0.8868
+
+Epoch 00001: saving model to textcnn_model_service_wait_time_01.hdf5
+— val_f1: 0.524074 — val_precision: 0.594667 — val_recall 0.522171
+Epoch 2/5
+ - 446s - loss: 0.1887 - categorical_accuracy: 0.8877 - val_loss: 0.1636 - val_categorical_accuracy: 0.8859
+
+Epoch 00002: saving model to textcnn_model_service_wait_time_02.hdf5
+— val_f1: 0.544581 — val_precision: 0.614852 — val_recall 0.555159
+Epoch 3/5
+ - 445s - loss: 0.1612 - categorical_accuracy: 0.8991 - val_loss: 0.1601 - val_categorical_accuracy: 0.8879
+
+Epoch 00003: saving model to textcnn_model_service_wait_time_03.hdf5
+— val_f1: 0.556551 — val_precision: 0.605270 — val_recall 0.573862
+Epoch 4/5
+ - 445s - loss: 0.1312 - categorical_accuracy: 0.9138 - val_loss: 0.1518 - val_categorical_accuracy: 0.8922
+
+Epoch 00004: saving model to textcnn_model_service_wait_time_04.hdf5
+— val_f1: 0.561020 — val_precision: 0.604111 — val_recall 0.572559
+Epoch 5/5
+ - 445s - loss: 0.0991 - categorical_accuracy: 0.9326 - val_loss: 0.1571 - val_categorical_accuracy: 0.8918
+
+Epoch 00005: saving model to textcnn_model_service_wait_time_05.hdf5
+— val_f1: 0.572108 — val_precision: 0.606647 — val_recall 0.572192
+-----------------------------------------------------------------------------------------------
+training(5/20): service_waiters_attitude
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 447s - loss: 0.5037 - categorical_accuracy: 0.6452 - val_loss: 0.2782 - val_categorical_accuracy: 0.7717
+
+Epoch 00001: saving model to textcnn_model_service_waiters_attitude_01.hdf5
+— val_f1: 0.692180 — val_precision: 0.687210 — val_recall 0.708305
+Epoch 2/5
+ - 445s - loss: 0.3634 - categorical_accuracy: 0.7845 - val_loss: 0.2480 - val_categorical_accuracy: 0.7919
+
+Epoch 00002: saving model to textcnn_model_service_waiters_attitude_02.hdf5
+— val_f1: 0.712922 — val_precision: 0.699647 — val_recall 0.735232
+Epoch 3/5
+ - 445s - loss: 0.3066 - categorical_accuracy: 0.8165 - val_loss: 0.2524 - val_categorical_accuracy: 0.7859
+
+Epoch 00003: saving model to textcnn_model_service_waiters_attitude_03.hdf5
+— val_f1: 0.721383 — val_precision: 0.719746 — val_recall 0.741451
+Epoch 4/5
+ - 445s - loss: 0.2555 - categorical_accuracy: 0.8470 - val_loss: 0.2447 - val_categorical_accuracy: 0.7933
+
+Epoch 00004: saving model to textcnn_model_service_waiters_attitude_04.hdf5
+— val_f1: 0.722053 — val_precision: 0.721407 — val_recall 0.734877
+Epoch 5/5
+ - 445s - loss: 0.2030 - categorical_accuracy: 0.8781 - val_loss: 0.2453 - val_categorical_accuracy: 0.7956
+
+Epoch 00005: saving model to textcnn_model_service_waiters_attitude_05.hdf5
+— val_f1: 0.720868 — val_precision: 0.723709 — val_recall 0.728176
+-----------------------------------------------------------------------------------------------
+training(6/20): service_parking_convenience
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 446s - loss: 0.1082 - categorical_accuracy: 0.9445 - val_loss: 0.0536 - val_categorical_accuracy: 0.9589
+
+Epoch 00001: saving model to textcnn_model_service_parking_convenience_01.hdf5
+— val_f1: 0.560878 — val_precision: 0.589710 — val_recall 0.603442
+Epoch 2/5
+ - 445s - loss: 0.0646 - categorical_accuracy: 0.9644 - val_loss: 0.0450 - val_categorical_accuracy: 0.9685
+
+Epoch 00002: saving model to textcnn_model_service_parking_convenience_02.hdf5
+— val_f1: 0.648608 — val_precision: 0.645120 — val_recall 0.666268
+Epoch 3/5
+ - 446s - loss: 0.0519 - categorical_accuracy: 0.9727 - val_loss: 0.0445 - val_categorical_accuracy: 0.9666
+
+Epoch 00003: saving model to textcnn_model_service_parking_convenience_03.hdf5
+— val_f1: 0.659554 — val_precision: 0.672360 — val_recall 0.670028
+Epoch 4/5
+ - 445s - loss: 0.0399 - categorical_accuracy: 0.9804 - val_loss: 0.0412 - val_categorical_accuracy: 0.9682
+
+Epoch 00004: saving model to textcnn_model_service_parking_convenience_04.hdf5
+— val_f1: 0.668860 — val_precision: 0.671050 — val_recall 0.678582
+Epoch 5/5
+ - 448s - loss: 0.0276 - categorical_accuracy: 0.9869 - val_loss: 0.0420 - val_categorical_accuracy: 0.9682
+
+Epoch 00005: saving model to textcnn_model_service_parking_convenience_05.hdf5
+— val_f1: 0.660441 — val_precision: 0.661366 — val_recall 0.668692
+-----------------------------------------------------------------------------------------------
+training(7/20): service_serving_speed
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 451s - loss: 0.2526 - categorical_accuracy: 0.8664 - val_loss: 0.1842 - val_categorical_accuracy: 0.8835
+
+Epoch 00001: saving model to textcnn_model_service_serving_speed_01.hdf5
+— val_f1: 0.547486 — val_precision: 0.582395 — val_recall 0.580195
+Epoch 2/5
+ - 449s - loss: 0.1742 - categorical_accuracy: 0.8981 - val_loss: 0.1533 - val_categorical_accuracy: 0.8973
+
+Epoch 00002: saving model to textcnn_model_service_serving_speed_02.hdf5
+— val_f1: 0.615879 — val_precision: 0.619341 — val_recall 0.628673
+Epoch 3/5
+ - 449s - loss: 0.1423 - categorical_accuracy: 0.9148 - val_loss: 0.1403 - val_categorical_accuracy: 0.9057
+
+Epoch 00003: saving model to textcnn_model_service_serving_speed_03.hdf5
+— val_f1: 0.640457 — val_precision: 0.652796 — val_recall 0.646693
+Epoch 4/5
+ - 447s - loss: 0.1133 - categorical_accuracy: 0.9311 - val_loss: 0.1426 - val_categorical_accuracy: 0.9023
+
+Epoch 00004: saving model to textcnn_model_service_serving_speed_04.hdf5
+— val_f1: 0.649704 — val_precision: 0.652546 — val_recall 0.659655
+Epoch 5/5
+ - 449s - loss: 0.0854 - categorical_accuracy: 0.9474 - val_loss: 0.1359 - val_categorical_accuracy: 0.9080
+
+Epoch 00005: saving model to textcnn_model_service_serving_speed_05.hdf5
+— val_f1: 0.653620 — val_precision: 0.662076 — val_recall 0.646989
+-----------------------------------------------------------------------------------------------
+training(8/20): price_level
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 449s - loss: 0.6083 - categorical_accuracy: 0.4650 - val_loss: 0.3938 - val_categorical_accuracy: 0.6631
+
+Epoch 00001: saving model to textcnn_model_price_level_01.hdf5
+— val_f1: 0.582303 — val_precision: 0.665241 — val_recall 0.592273
+Epoch 2/5
+ - 448s - loss: 0.4554 - categorical_accuracy: 0.7061 - val_loss: 0.3370 - val_categorical_accuracy: 0.7133
+
+Epoch 00002: saving model to textcnn_model_price_level_02.hdf5
+— val_f1: 0.641524 — val_precision: 0.693992 — val_recall 0.650858
+Epoch 3/5
+ - 447s - loss: 0.3929 - categorical_accuracy: 0.7482 - val_loss: 0.3189 - val_categorical_accuracy: 0.7314
+
+Epoch 00003: saving model to textcnn_model_price_level_03.hdf5
+— val_f1: 0.664448 — val_precision: 0.701790 — val_recall 0.674303
+Epoch 4/5
+ - 446s - loss: 0.3358 - categorical_accuracy: 0.7825 - val_loss: 0.3411 - val_categorical_accuracy: 0.7185
+
+Epoch 00004: saving model to textcnn_model_price_level_04.hdf5
+— val_f1: 0.650735 — val_precision: 0.719582 — val_recall 0.646692
+Epoch 5/5
+ - 445s - loss: 0.2763 - categorical_accuracy: 0.8190 - val_loss: 0.3177 - val_categorical_accuracy: 0.7381
+
+Epoch 00005: saving model to textcnn_model_price_level_05.hdf5
+— val_f1: 0.681376 — val_precision: 0.695397 — val_recall 0.692248
+-----------------------------------------------------------------------------------------------
+training(9/20): price_cost_effective
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/5
+ - 447s - loss: 0.2732 - categorical_accuracy: 0.8378 - val_loss: 0.2016 - val_categorical_accuracy: 0.8675
+
+Epoch 00001: saving model to textcnn_model_price_cost_effective_01.hdf5
+— val_f1: 0.633025 — val_precision: 0.653479 — val_recall 0.627249
+Epoch 2/5
+ - 445s - loss: 0.2051 - categorical_accuracy: 0.8718 - val_loss: 0.1850 - val_categorical_accuracy: 0.8732
+
+Epoch 00002: saving model to textcnn_model_price_cost_effective_02.hdf5
+— val_f1: 0.653877 — val_precision: 0.649736 — val_recall 0.660649
+Epoch 3/5
+ - 446s - loss: 0.1777 - categorical_accuracy: 0.8812 - val_loss: 0.1895 - val_categorical_accuracy: 0.8717
+
+Epoch 00003: saving model to textcnn_model_price_cost_effective_03.hdf5
+— val_f1: 0.655053 — val_precision: 0.642735 — val_recall 0.671858
+Epoch 4/5
+ - 446s - loss: 0.1504 - categorical_accuracy: 0.8952 - val_loss: 0.1722 - val_categorical_accuracy: 0.8771
+
+Epoch 00004: saving model to textcnn_model_price_cost_effective_04.hdf5
+— val_f1: 0.659019 — val_precision: 0.672650 — val_recall 0.651552
+Epoch 5/5
+ - 445s - loss: 0.1188 - categorical_accuracy: 0.9126 - val_loss: 0.1756 - val_categorical_accuracy: 0.8771
+
+Epoch 00005: saving model to textcnn_model_price_cost_effective_05.hdf5
+— val_f1: 0.654729 — val_precision: 0.664577 — val_recall 0.649579
+-----------------------------------------------------------------------------------------------

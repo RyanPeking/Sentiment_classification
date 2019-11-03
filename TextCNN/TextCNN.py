@@ -1,14 +1,17 @@
 from keras.layers import Input, Dense, Embedding, Conv2D, MaxPool2D
 from keras.layers import Reshape, Flatten, Dropout, Concatenate
-from keras.callbacks import ModelCheckpoint
 from keras.optimizers import Adam
 from keras.models import Model
-from keras.callbacks import Callback
+from keras.callbacks import ModelCheckpoint, Callback
 import numpy as np
 from keras.preprocessing import text, sequence
 from sklearn.metrics import roc_auc_score, f1_score, recall_score, precision_score
 import pandas as pd
-from config import train_path, valid_path
+import pickle
+
+
+train_path = '../dataset/train.csv'
+valid_path = '../dataset/valid.csv'
 
 
 max_features = 50000
@@ -35,6 +38,8 @@ def reformat(labels):
 def tokenizer(X_train, X_valid):
     tokenizer = text.Tokenizer(num_words=max_features)
     tokenizer.fit_on_texts(list(X_train) + list(X_valid))
+    with open('tokenizer.pickle', 'wb') as handle:
+        pickle.dump(tokenizer, handle)
     X_train = tokenizer.texts_to_sequences(X_train)
     X_valid = tokenizer.texts_to_sequences(X_valid)
     X_train = sequence.pad_sequences(X_train, maxlen=maxlen)
@@ -92,7 +97,9 @@ class Metrics(Callback):
         self.val_f1s.append(_val_f1)
         self.val_recalls.append(_val_recall)
         self.val_precisions.append(_val_precision)
-        print('— val_f1: %f — val_precision: %f — val_recall %f' %(_val_f1, _val_precision, _val_recall))
+        with open('info.txt', 'a') as f:
+            print('— val_f1: %f — val_precision: %f — val_recall %f' % (_val_f1, _val_precision, _val_recall), file=f)
+        print('— val_f1: %f — val_precision: %f — val_recall %f' % (_val_f1, _val_precision, _val_recall))
         # print(' — val_f1:' ,_val_f1)
 
 
@@ -128,23 +135,30 @@ def get_model():
     return model
 
 def train_model(i, category, category_num):
-    print('training({}/{}): {}'.format(str(i+1), str(category_num), category))
+    with open('info.txt', 'a') as f:
+        print('training({}/{}): {}'.format(str(i + 1), str(category_num), category), file=f)
+    print('training({}/{}): {}'.format(str(i + 1), str(category_num), category))
     model = get_model()
     batch_size = 32
-    epochs = 3
+    epochs = 8
     X_train, y_train, X_valid, y_valid = get_data(train_path, valid_path, category)
     # RocAuc = RocAucEvaluation(validation_data=(X_valid, y_valid), interval=1)
     metrics = Metrics()
     class_weights = {
         0: 1,
-        1: 5,
-        2: 5,
+        1: 3,
+        2: 3,
         3: 0.5
     }
 
+    file_path = "textcnn_model_" + category + "_{epoch:02d}.hdf5"
+    checkpoint = ModelCheckpoint(file_path, verbose=2, save_weights_only=True)
+    callbacks_list = [checkpoint, metrics]
     model.fit(X_train, y_train, class_weight=class_weights, batch_size=batch_size, epochs=epochs,
               validation_data=(X_valid, y_valid),
-              callbacks=[metrics], verbose=2)
+              callbacks=callbacks_list, verbose=2)
+    with open('info.txt', 'a') as f:
+        print('-----------------------------------------------------------------------------------------------', file=f)
     print('-----------------------------------------------------------------------------------------------')
 
 

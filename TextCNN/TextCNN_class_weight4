@@ -1,3 +1,6 @@
+未设置class_weight
+
+
 training(1/20): location_traffic_convenience
 WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
 

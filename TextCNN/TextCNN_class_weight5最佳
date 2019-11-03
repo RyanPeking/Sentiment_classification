@@ -1,0 +1,478 @@
+ class_weights = {
+        0: 1,
+        1: 3,
+        2: 3,
+        3: 0.5
+    }
+
+
+training(1/20): location_traffic_convenience
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4409: The name tf.random_normal is deprecated. Please use tf.random.normal instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3657: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/nn_impl.py:183: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:197: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+ - 459s - loss: 0.1753 - categorical_accuracy: 0.9040 - val_loss: 0.1207 - val_categorical_accuracy: 0.9320
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+— val_f1: 0.491431 — val_precision: 0.618041 — val_recall 0.482693
+Epoch 2/8
+ - 452s - loss: 0.1211 - categorical_accuracy: 0.9321 - val_loss: 0.1047 - val_categorical_accuracy: 0.9367
+— val_f1: 0.597705 — val_precision: 0.661998 — val_recall 0.587799
+Epoch 3/8
+ - 452s - loss: 0.0980 - categorical_accuracy: 0.9381 - val_loss: 0.1091 - val_categorical_accuracy: 0.9333
+— val_f1: 0.603564 — val_precision: 0.609336 — val_recall 0.614943
+Epoch 4/8
+ - 452s - loss: 0.0782 - categorical_accuracy: 0.9483 - val_loss: 0.1078 - val_categorical_accuracy: 0.9335
+— val_f1: 0.601033 — val_precision: 0.615273 — val_recall 0.611239
+Epoch 5/8
+ - 452s - loss: 0.0585 - categorical_accuracy: 0.9605 - val_loss: 0.1096 - val_categorical_accuracy: 0.9331
+— val_f1: 0.613429 — val_precision: 0.615600 — val_recall 0.617885
+Epoch 6/8
+ - 452s - loss: 0.0394 - categorical_accuracy: 0.9750 - val_loss: 0.1160 - val_categorical_accuracy: 0.9311
+— val_f1: 0.606574 — val_precision: 0.609533 — val_recall 0.613251
+Epoch 7/8
+ - 451s - loss: 0.0238 - categorical_accuracy: 0.9857 - val_loss: 0.1239 - val_categorical_accuracy: 0.9305
+— val_f1: 0.599177 — val_precision: 0.637529 — val_recall 0.577889
+Epoch 8/8
+ - 452s - loss: 0.0133 - categorical_accuracy: 0.9923 - val_loss: 0.1402 - val_categorical_accuracy: 0.9260
+— val_f1: 0.586453 — val_precision: 0.619339 — val_recall 0.566316
+-----------------------------------------------------------------------------------------------
+training(2/20): location_distance_from_business_district
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 454s - loss: 0.1841 - categorical_accuracy: 0.8472 - val_loss: 0.1680 - val_categorical_accuracy: 0.8743
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+— val_f1: 0.411852 — val_precision: 0.525435 — val_recall 0.407596
+Epoch 2/8
+ - 453s - loss: 0.1349 - categorical_accuracy: 0.8827 - val_loss: 0.1713 - val_categorical_accuracy: 0.8722
+— val_f1: 0.509572 — val_precision: 0.513037 — val_recall 0.508493
+Epoch 3/8
+ - 453s - loss: 0.1153 - categorical_accuracy: 0.8958 - val_loss: 0.1632 - val_categorical_accuracy: 0.8762
+— val_f1: 0.520087 — val_precision: 0.509138 — val_recall 0.532647
+Epoch 4/8
+ - 453s - loss: 0.0961 - categorical_accuracy: 0.9118 - val_loss: 0.1718 - val_categorical_accuracy: 0.8707
+— val_f1: 0.520348 — val_precision: 0.506308 — val_recall 0.536634
+Epoch 5/8
+ - 453s - loss: 0.0756 - categorical_accuracy: 0.9337 - val_loss: 0.1717 - val_categorical_accuracy: 0.8725
+— val_f1: 0.498728 — val_precision: 0.553043 — val_recall 0.498164
+Epoch 6/8
+ - 453s - loss: 0.0544 - categorical_accuracy: 0.9560 - val_loss: 0.1840 - val_categorical_accuracy: 0.8713
+— val_f1: 0.482899 — val_precision: 0.505501 — val_recall 0.468534
+Epoch 7/8
+ - 453s - loss: 0.0366 - categorical_accuracy: 0.9738 - val_loss: 0.2036 - val_categorical_accuracy: 0.8685
+— val_f1: 0.473406 — val_precision: 0.484549 — val_recall 0.464214
+Epoch 8/8
+ - 451s - loss: 0.0221 - categorical_accuracy: 0.9862 - val_loss: 0.2271 - val_categorical_accuracy: 0.8640
+— val_f1: 0.468326 — val_precision: 0.486286 — val_recall 0.454230
+-----------------------------------------------------------------------------------------------
+training(3/20): location_easy_to_find
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 453s - loss: 0.2633 - categorical_accuracy: 0.8468 - val_loss: 0.1779 - val_categorical_accuracy: 0.8808
+— val_f1: 0.572584 — val_precision: 0.647181 — val_recall 0.590226
+Epoch 2/8
+ - 453s - loss: 0.1888 - categorical_accuracy: 0.8814 - val_loss: 0.1653 - val_categorical_accuracy: 0.8890
+— val_f1: 0.618745 — val_precision: 0.657780 — val_recall 0.632598
+Epoch 3/8
+ - 453s - loss: 0.1578 - categorical_accuracy: 0.8967 - val_loss: 0.1677 - val_categorical_accuracy: 0.8832
+— val_f1: 0.629451 — val_precision: 0.625883 — val_recall 0.652108
+Epoch 4/8
+ - 452s - loss: 0.1309 - categorical_accuracy: 0.9107 - val_loss: 0.1576 - val_categorical_accuracy: 0.8887
+— val_f1: 0.644800 — val_precision: 0.647174 — val_recall 0.647161
+Epoch 5/8
+ - 453s - loss: 0.1029 - categorical_accuracy: 0.9308 - val_loss: 0.1606 - val_categorical_accuracy: 0.8862
+— val_f1: 0.636175 — val_precision: 0.650304 — val_recall 0.636444
+Epoch 6/8
+ - 453s - loss: 0.0743 - categorical_accuracy: 0.9510 - val_loss: 0.1678 - val_categorical_accuracy: 0.8881
+— val_f1: 0.636093 — val_precision: 0.656037 — val_recall 0.638733
+Epoch 7/8
+ - 453s - loss: 0.0489 - categorical_accuracy: 0.9690 - val_loss: 0.1782 - val_categorical_accuracy: 0.8827
+— val_f1: 0.627241 — val_precision: 0.639677 — val_recall 0.622300
+Epoch 8/8
+ - 453s - loss: 0.0299 - categorical_accuracy: 0.9820 - val_loss: 0.1942 - val_categorical_accuracy: 0.8831
+— val_f1: 0.624827 — val_precision: 0.653057 — val_recall 0.606539
+-----------------------------------------------------------------------------------------------
+training(4/20): service_wait_time
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 454s - loss: 0.2464 - categorical_accuracy: 0.8761 - val_loss: 0.1826 - val_categorical_accuracy: 0.8836
+— val_f1: 0.518315 — val_precision: 0.618921 — val_recall 0.520249
+Epoch 2/8
+ - 453s - loss: 0.1894 - categorical_accuracy: 0.8878 - val_loss: 0.1613 - val_categorical_accuracy: 0.8867
+— val_f1: 0.545402 — val_precision: 0.613658 — val_recall 0.555605
+Epoch 3/8
+ - 453s - loss: 0.1617 - categorical_accuracy: 0.8986 - val_loss: 0.1534 - val_categorical_accuracy: 0.8912
+— val_f1: 0.559904 — val_precision: 0.617708 — val_recall 0.562909
+Epoch 4/8
+ - 453s - loss: 0.1320 - categorical_accuracy: 0.9137 - val_loss: 0.1514 - val_categorical_accuracy: 0.8933
+— val_f1: 0.562461 — val_precision: 0.617923 — val_recall 0.566025
+Epoch 5/8
+ - 453s - loss: 0.0999 - categorical_accuracy: 0.9313 - val_loss: 0.1551 - val_categorical_accuracy: 0.8927
+— val_f1: 0.566721 — val_precision: 0.615929 — val_recall 0.561280
+Epoch 6/8
+ - 453s - loss: 0.0711 - categorical_accuracy: 0.9493 - val_loss: 0.1588 - val_categorical_accuracy: 0.8954
+— val_f1: 0.555516 — val_precision: 0.603625 — val_recall 0.532529
+Epoch 7/8
+ - 453s - loss: 0.0482 - categorical_accuracy: 0.9639 - val_loss: 0.1726 - val_categorical_accuracy: 0.8918
+— val_f1: 0.539281 — val_precision: 0.566505 — val_recall 0.522781
+Epoch 8/8
+ - 453s - loss: 0.0307 - categorical_accuracy: 0.9779 - val_loss: 0.1938 - val_categorical_accuracy: 0.8932
+— val_f1: 0.525695 — val_precision: 0.572740 — val_recall 0.492180
+-----------------------------------------------------------------------------------------------
+training(5/20): service_waiters_attitude
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 454s - loss: 0.5079 - categorical_accuracy: 0.6354 - val_loss: 0.2849 - val_categorical_accuracy: 0.7677
+— val_f1: 0.691093 — val_precision: 0.684379 — val_recall 0.711118
+Epoch 2/8
+ - 453s - loss: 0.3630 - categorical_accuracy: 0.7855 - val_loss: 0.2517 - val_categorical_accuracy: 0.7878
+— val_f1: 0.717032 — val_precision: 0.734945 — val_recall 0.722881
+Epoch 3/8
+ - 453s - loss: 0.3072 - categorical_accuracy: 0.8168 - val_loss: 0.2436 - val_categorical_accuracy: 0.7928
+— val_f1: 0.722027 — val_precision: 0.731072 — val_recall 0.729838
+Epoch 4/8
+ - 453s - loss: 0.2564 - categorical_accuracy: 0.8457 - val_loss: 0.2403 - val_categorical_accuracy: 0.7955
+— val_f1: 0.723638 — val_precision: 0.729851 — val_recall 0.731203
+Epoch 5/8
+ - 453s - loss: 0.2037 - categorical_accuracy: 0.8775 - val_loss: 0.2442 - val_categorical_accuracy: 0.7974
+— val_f1: 0.720635 — val_precision: 0.719617 — val_recall 0.728626
+Epoch 6/8
+ - 453s - loss: 0.1511 - categorical_accuracy: 0.9079 - val_loss: 0.2525 - val_categorical_accuracy: 0.7951
+— val_f1: 0.712838 — val_precision: 0.711222 — val_recall 0.718249
+Epoch 7/8
+ - 453s - loss: 0.1045 - categorical_accuracy: 0.9341 - val_loss: 0.2674 - val_categorical_accuracy: 0.7933
+— val_f1: 0.705004 — val_precision: 0.699518 — val_recall 0.712237
+Epoch 8/8
+ - 453s - loss: 0.0691 - categorical_accuracy: 0.9549 - val_loss: 0.2847 - val_categorical_accuracy: 0.7919
+— val_f1: 0.697261 — val_precision: 0.694535 — val_recall 0.700409
+-----------------------------------------------------------------------------------------------
+training(6/20): service_parking_convenience
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 454s - loss: 0.1112 - categorical_accuracy: 0.9471 - val_loss: 0.0560 - val_categorical_accuracy: 0.9517
+— val_f1: 0.503400 — val_precision: 0.719756 — val_recall 0.553923
+Epoch 2/8
+ - 453s - loss: 0.0657 - categorical_accuracy: 0.9636 - val_loss: 0.0450 - val_categorical_accuracy: 0.9695
+— val_f1: 0.648672 — val_precision: 0.652024 — val_recall 0.652318
+Epoch 3/8
+ - 453s - loss: 0.0525 - categorical_accuracy: 0.9728 - val_loss: 0.0438 - val_categorical_accuracy: 0.9684
+— val_f1: 0.667077 — val_precision: 0.662067 — val_recall 0.683489
+Epoch 4/8
+ - 453s - loss: 0.0403 - categorical_accuracy: 0.9797 - val_loss: 0.0414 - val_categorical_accuracy: 0.9703
+— val_f1: 0.679157 — val_precision: 0.676993 — val_recall 0.682772
+Epoch 5/8
+ - 453s - loss: 0.0279 - categorical_accuracy: 0.9864 - val_loss: 0.0412 - val_categorical_accuracy: 0.9699
+— val_f1: 0.644423 — val_precision: 0.648481 — val_recall 0.648676
+Epoch 6/8
+ - 453s - loss: 0.0176 - categorical_accuracy: 0.9914 - val_loss: 0.0428 - val_categorical_accuracy: 0.9703
+— val_f1: 0.645851 — val_precision: 0.658379 — val_recall 0.644453
+Epoch 7/8
+ - 453s - loss: 0.0105 - categorical_accuracy: 0.9947 - val_loss: 0.0472 - val_categorical_accuracy: 0.9709
+— val_f1: 0.627742 — val_precision: 0.661934 — val_recall 0.622337
+Epoch 8/8
+ - 453s - loss: 0.0061 - categorical_accuracy: 0.9968 - val_loss: 0.0535 - val_categorical_accuracy: 0.9687
+— val_f1: 0.632714 — val_precision: 0.660793 — val_recall 0.620204
+-----------------------------------------------------------------------------------------------
+training(7/20): service_serving_speed
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 454s - loss: 0.2516 - categorical_accuracy: 0.8667 - val_loss: 0.1750 - val_categorical_accuracy: 0.8875
+— val_f1: 0.570318 — val_precision: 0.584060 — val_recall 0.586558
+Epoch 2/8
+ - 453s - loss: 0.1737 - categorical_accuracy: 0.8982 - val_loss: 0.1535 - val_categorical_accuracy: 0.8983
+— val_f1: 0.612262 — val_precision: 0.618220 — val_recall 0.630586
+Epoch 3/8
+ - 453s - loss: 0.1415 - categorical_accuracy: 0.9148 - val_loss: 0.1406 - val_categorical_accuracy: 0.9063
+— val_f1: 0.633950 — val_precision: 0.654546 — val_recall 0.637949
+Epoch 4/8
+ - 453s - loss: 0.1135 - categorical_accuracy: 0.9302 - val_loss: 0.1396 - val_categorical_accuracy: 0.9057
+— val_f1: 0.646991 — val_precision: 0.652789 — val_recall 0.654760
+Epoch 5/8
+ - 453s - loss: 0.0860 - categorical_accuracy: 0.9465 - val_loss: 0.1386 - val_categorical_accuracy: 0.9062
+— val_f1: 0.652426 — val_precision: 0.654341 — val_recall 0.653832
+Epoch 6/8
+ - 453s - loss: 0.0600 - categorical_accuracy: 0.9619 - val_loss: 0.1406 - val_categorical_accuracy: 0.9103
+— val_f1: 0.649316 — val_precision: 0.673494 — val_recall 0.630675
+Epoch 7/8
+ - 453s - loss: 0.0385 - categorical_accuracy: 0.9752 - val_loss: 0.1547 - val_categorical_accuracy: 0.9086
+— val_f1: 0.630087 — val_precision: 0.659358 — val_recall 0.614911
+Epoch 8/8
+ - 453s - loss: 0.0232 - categorical_accuracy: 0.9856 - val_loss: 0.1705 - val_categorical_accuracy: 0.9081
+— val_f1: 0.623313 — val_precision: 0.666414 — val_recall 0.602489
+-----------------------------------------------------------------------------------------------
+training(8/20): price_level
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 455s - loss: 0.6090 - categorical_accuracy: 0.4741 - val_loss: 0.3923 - val_categorical_accuracy: 0.6697
+— val_f1: 0.584717 — val_precision: 0.648973 — val_recall 0.605099
+Epoch 2/8
+ - 453s - loss: 0.4543 - categorical_accuracy: 0.7089 - val_loss: 0.3459 - val_categorical_accuracy: 0.7100
+— val_f1: 0.636033 — val_precision: 0.696765 — val_recall 0.648491
+Epoch 3/8
+ - 453s - loss: 0.3903 - categorical_accuracy: 0.7494 - val_loss: 0.3320 - val_categorical_accuracy: 0.7280
+— val_f1: 0.667787 — val_precision: 0.693696 — val_recall 0.682362
+Epoch 4/8
+ - 453s - loss: 0.3343 - categorical_accuracy: 0.7844 - val_loss: 0.3241 - val_categorical_accuracy: 0.7321
+— val_f1: 0.670070 — val_precision: 0.702696 — val_recall 0.679818
+Epoch 5/8
+ - 453s - loss: 0.2764 - categorical_accuracy: 0.8179 - val_loss: 0.3193 - val_categorical_accuracy: 0.7375
+— val_f1: 0.679257 — val_precision: 0.698735 — val_recall 0.685922
+Epoch 6/8
+ - 453s - loss: 0.2158 - categorical_accuracy: 0.8537 - val_loss: 0.3251 - val_categorical_accuracy: 0.7350
+— val_f1: 0.676680 — val_precision: 0.698738 — val_recall 0.675463
+Epoch 7/8
+ - 453s - loss: 0.1591 - categorical_accuracy: 0.8893 - val_loss: 0.3403 - val_categorical_accuracy: 0.7323
+— val_f1: 0.676550 — val_precision: 0.679663 — val_recall 0.683717
+Epoch 8/8
+ - 453s - loss: 0.1118 - categorical_accuracy: 0.9206 - val_loss: 0.3665 - val_categorical_accuracy: 0.7279
+— val_f1: 0.669039 — val_precision: 0.677150 — val_recall 0.670000
+-----------------------------------------------------------------------------------------------
+training(9/20): price_cost_effective
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 455s - loss: 0.2707 - categorical_accuracy: 0.8381 - val_loss: 0.2012 - val_categorical_accuracy: 0.8687
+— val_f1: 0.600211 — val_precision: 0.618346 — val_recall 0.609464
+Epoch 2/8
+ - 453s - loss: 0.2039 - categorical_accuracy: 0.8728 - val_loss: 0.1831 - val_categorical_accuracy: 0.8750
+— val_f1: 0.658922 — val_precision: 0.661842 — val_recall 0.660597
+Epoch 3/8
+ - 453s - loss: 0.1779 - categorical_accuracy: 0.8816 - val_loss: 0.1764 - val_categorical_accuracy: 0.8769
+— val_f1: 0.659603 — val_precision: 0.664155 — val_recall 0.661370
+Epoch 4/8
+ - 453s - loss: 0.1488 - categorical_accuracy: 0.8962 - val_loss: 0.1766 - val_categorical_accuracy: 0.8759
+— val_f1: 0.662802 — val_precision: 0.667081 — val_recall 0.662342
+Epoch 5/8
+ - 453s - loss: 0.1168 - categorical_accuracy: 0.9136 - val_loss: 0.1753 - val_categorical_accuracy: 0.8767
+— val_f1: 0.651784 — val_precision: 0.666105 — val_recall 0.643973
+Epoch 6/8
+ - 453s - loss: 0.0839 - categorical_accuracy: 0.9374 - val_loss: 0.1822 - val_categorical_accuracy: 0.8754
+— val_f1: 0.641016 — val_precision: 0.668312 — val_recall 0.624078
+Epoch 7/8
+ - 453s - loss: 0.0546 - categorical_accuracy: 0.9582 - val_loss: 0.2007 - val_categorical_accuracy: 0.8681
+— val_f1: 0.623306 — val_precision: 0.654241 — val_recall 0.605439
+Epoch 8/8
+ - 453s - loss: 0.0335 - categorical_accuracy: 0.9747 - val_loss: 0.2206 - val_categorical_accuracy: 0.8643
+— val_f1: 0.612431 — val_precision: 0.642940 — val_recall 0.592857
+-----------------------------------------------------------------------------------------------
+training(10/20): price_discount
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 455s - loss: 0.3787 - categorical_accuracy: 0.6734 - val_loss: 0.2653 - val_categorical_accuracy: 0.7895
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+— val_f1: 0.546500 — val_precision: 0.574201 — val_recall 0.570324
+Epoch 2/8
+ - 453s - loss: 0.2886 - categorical_accuracy: 0.7996 - val_loss: 0.2383 - val_categorical_accuracy: 0.8037
+— val_f1: 0.555132 — val_precision: 0.581416 — val_recall 0.577032
+Epoch 3/8
+ - 453s - loss: 0.2567 - categorical_accuracy: 0.8172 - val_loss: 0.2457 - val_categorical_accuracy: 0.8047
+— val_f1: 0.559300 — val_precision: 0.833211 — val_recall 0.580943
+Epoch 4/8
+ - 453s - loss: 0.2224 - categorical_accuracy: 0.8383 - val_loss: 0.2412 - val_categorical_accuracy: 0.8099
+— val_f1: 0.576424 — val_precision: 0.729857 — val_recall 0.593991
+Epoch 5/8
+ - 453s - loss: 0.1824 - categorical_accuracy: 0.8673 - val_loss: 0.2315 - val_categorical_accuracy: 0.8173
+— val_f1: 0.598783 — val_precision: 0.670102 — val_recall 0.606934
+Epoch 6/8
+ - 453s - loss: 0.1406 - categorical_accuracy: 0.8994 - val_loss: 0.2319 - val_categorical_accuracy: 0.8185
+— val_f1: 0.620323 — val_precision: 0.650867 — val_recall 0.620812
+Epoch 7/8
+ - 453s - loss: 0.1024 - categorical_accuracy: 0.9263 - val_loss: 0.2473 - val_categorical_accuracy: 0.8135
+— val_f1: 0.603402 — val_precision: 0.631542 — val_recall 0.603943
+Epoch 8/8
+ - 453s - loss: 0.0702 - categorical_accuracy: 0.9491 - val_loss: 0.2600 - val_categorical_accuracy: 0.8089
+— val_f1: 0.593540 — val_precision: 0.617817 — val_recall 0.589327
+-----------------------------------------------------------------------------------------------
+training(11/20): environment_decoration
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 455s - loss: 0.3957 - categorical_accuracy: 0.7076 - val_loss: 0.2843 - val_categorical_accuracy: 0.7767
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+— val_f1: 0.522605 — val_precision: 0.513585 — val_recall 0.560722
+Epoch 2/8
+ - 453s - loss: 0.2997 - categorical_accuracy: 0.7979 - val_loss: 0.2593 - val_categorical_accuracy: 0.7900
+— val_f1: 0.592771 — val_precision: 0.639404 — val_recall 0.609677
+Epoch 3/8
+ - 453s - loss: 0.2547 - categorical_accuracy: 0.8244 - val_loss: 0.2462 - val_categorical_accuracy: 0.7993
+— val_f1: 0.621575 — val_precision: 0.667509 — val_recall 0.629231
+Epoch 4/8
+ - 453s - loss: 0.2123 - categorical_accuracy: 0.8525 - val_loss: 0.2461 - val_categorical_accuracy: 0.7997
+— val_f1: 0.628009 — val_precision: 0.653705 — val_recall 0.635028
+Epoch 5/8
+ - 453s - loss: 0.1685 - categorical_accuracy: 0.8825 - val_loss: 0.2377 - val_categorical_accuracy: 0.8093
+— val_f1: 0.643112 — val_precision: 0.635515 — val_recall 0.655032
+Epoch 6/8
+ - 453s - loss: 0.1230 - categorical_accuracy: 0.9132 - val_loss: 0.2449 - val_categorical_accuracy: 0.8070
+— val_f1: 0.635623 — val_precision: 0.632513 — val_recall 0.640177
+Epoch 7/8
+ - 453s - loss: 0.0850 - categorical_accuracy: 0.9387 - val_loss: 0.2587 - val_categorical_accuracy: 0.8063
+— val_f1: 0.633564 — val_precision: 0.634639 — val_recall 0.633090
+Epoch 8/8
+ - 453s - loss: 0.0558 - categorical_accuracy: 0.9590 - val_loss: 0.2855 - val_categorical_accuracy: 0.8024
+— val_f1: 0.617040 — val_precision: 0.615643 — val_recall 0.619841
+-----------------------------------------------------------------------------------------------
+training(1/9): environment_noise
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4409: The name tf.random_normal is deprecated. Please use tf.random.normal instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3657: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/nn_impl.py:183: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:197: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+ - 452s - loss: 0.3295 - categorical_accuracy: 0.7534 - val_loss: 0.2603 - val_categorical_accuracy: 0.7830
+— val_f1: 0.615574 — val_precision: 0.623635 — val_recall 0.641305
+Epoch 2/8
+ - 450s - loss: 0.2471 - categorical_accuracy: 0.7987 - val_loss: 0.2431 - val_categorical_accuracy: 0.7950
+— val_f1: 0.648659 — val_precision: 0.625031 — val_recall 0.700645
+Epoch 3/8
+ - 448s - loss: 0.2092 - categorical_accuracy: 0.8275 - val_loss: 0.2398 - val_categorical_accuracy: 0.7995
+— val_f1: 0.656126 — val_precision: 0.631773 — val_recall 0.715071
+Epoch 4/8
+ - 448s - loss: 0.1735 - categorical_accuracy: 0.8554 - val_loss: 0.2294 - val_categorical_accuracy: 0.8091
+— val_f1: 0.662737 — val_precision: 0.642876 — val_recall 0.702144
+Epoch 5/8
+ - 448s - loss: 0.1355 - categorical_accuracy: 0.8869 - val_loss: 0.2261 - val_categorical_accuracy: 0.8141
+— val_f1: 0.660791 — val_precision: 0.645941 — val_recall 0.686877
+Epoch 6/8
+ - 449s - loss: 0.0976 - categorical_accuracy: 0.9202 - val_loss: 0.2327 - val_categorical_accuracy: 0.8145
+— val_f1: 0.649080 — val_precision: 0.638740 — val_recall 0.660496
+Epoch 7/8
+ - 448s - loss: 0.0645 - categorical_accuracy: 0.9488 - val_loss: 0.2580 - val_categorical_accuracy: 0.8086
+— val_f1: 0.640356 — val_precision: 0.628552 — val_recall 0.653543
+Epoch 8/8
+ - 448s - loss: 0.0396 - categorical_accuracy: 0.9699 - val_loss: 0.2872 - val_categorical_accuracy: 0.8047
+— val_f1: 0.630873 — val_precision: 0.629963 — val_recall 0.633083
+-----------------------------------------------------------------------------------------------
+training(2/9): environment_space
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 450s - loss: 0.4630 - categorical_accuracy: 0.6445 - val_loss: 0.3350 - val_categorical_accuracy: 0.7056
+— val_f1: 0.571148 — val_precision: 0.580952 — val_recall 0.597564
+Epoch 2/8
+ - 449s - loss: 0.3608 - categorical_accuracy: 0.7182 - val_loss: 0.3316 - val_categorical_accuracy: 0.7045
+— val_f1: 0.592411 — val_precision: 0.607324 — val_recall 0.632120
+Epoch 3/8
+ - 449s - loss: 0.3145 - categorical_accuracy: 0.7547 - val_loss: 0.3078 - val_categorical_accuracy: 0.7355
+— val_f1: 0.613673 — val_precision: 0.595420 — val_recall 0.651788
+Epoch 4/8
+ - 449s - loss: 0.2711 - categorical_accuracy: 0.7891 - val_loss: 0.2991 - val_categorical_accuracy: 0.7425
+— val_f1: 0.614866 — val_precision: 0.595507 — val_recall 0.649105
+Epoch 5/8
+ - 449s - loss: 0.2233 - categorical_accuracy: 0.8269 - val_loss: 0.3098 - val_categorical_accuracy: 0.7351
+— val_f1: 0.607943 — val_precision: 0.594448 — val_recall 0.645574
+Epoch 6/8
+ - 448s - loss: 0.1718 - categorical_accuracy: 0.8646 - val_loss: 0.3039 - val_categorical_accuracy: 0.7476
+— val_f1: 0.605498 — val_precision: 0.587283 — val_recall 0.629854
+Epoch 7/8
+ - 448s - loss: 0.1244 - categorical_accuracy: 0.8997 - val_loss: 0.3171 - val_categorical_accuracy: 0.7465
+— val_f1: 0.605146 — val_precision: 0.598662 — val_recall 0.615047
+Epoch 8/8
+ - 447s - loss: 0.0844 - categorical_accuracy: 0.9324 - val_loss: 0.3364 - val_categorical_accuracy: 0.7460
+— val_f1: 0.596808 — val_precision: 0.592303 — val_recall 0.601923
+-----------------------------------------------------------------------------------------------
+training(3/9): environment_cleaness
+Train on 105000 samples, validate on 15000 samples
+Epoch 1/8
+ - 449s - loss: 0.3594 - categorical_accuracy: 0.7382 - val_loss: 0.2674 - val_categorical_accuracy: 0.7839
+— val_f1: 0.581982 — val_precision: 0.583276 — val_recall 0.596372
+Epoch 2/8
+ - 447s - loss: 0.2712 - categorical_accuracy: 0.7990 - val_loss: 0.2439 - val_categorical_accuracy: 0.7959
+— val_f1: 0.627502 — val_precision: 0.606631 — val_recall 0.670933
+Epoch 3/8
+ - 447s - loss: 0.2262 - categorical_accuracy: 0.8277 - val_loss: 0.2381 - val_categorical_accuracy: 0.8033
+— val_f1: 0.633703 — val_precision: 0.611292 — val_recall 0.669058
+Epoch 4/8
+ - 447s - loss: 0.1892 - categorical_accuracy: 0.8544 - val_loss: 0.2226 - val_categorical_accuracy: 0.8191
+— val_f1: 0.642933 — val_precision: 0.625039 — val_recall 0.665426
+Epoch 5/8
+ - 446s - loss: 0.1496 - categorical_accuracy: 0.8846 - val_loss: 0.2363 - val_categorical_accuracy: 0.8113
+— val_f1: 0.636791 — val_precision: 0.618930 — val_recall 0.663012
+Epoch 6/8
+ - 446s - loss: 0.1102 - categorical_accuracy: 0.9144 - val_loss: 0.2302 - val_categorical_accuracy: 0.8187
+— val_f1: 0.633245 — val_precision: 0.634597 — val_recall 0.633951
+Epoch 7/8
+ - 447s - loss: 0.0744 - categorical_accuracy: 0.9420 - val_loss: 0.2413 - val_categorical_accuracy: 0.8199
+— val_f1: 0.622966 — val_precision: 0.635921 — val_recall 0.613668
+Epoch 8/8
+ - 447s - loss: 0.0473 - categorical_accuracy: 0.9637 - val_loss: 0.2672 - val_categorical_accuracy: 0.8150
+— val_f1: 0.613217 — val_precision: 0.620691 — val_recall 0.608932
+-----------------------------------------------------------------------------------------------
