@@ -19,7 +19,7 @@ def data_process(comment):
 
 def predict(query):
     model = get_model()
-    model.load_weights('./TextCNN/textcnn_model_location_traffic_convenience_01.hdf5')
+    # model.load_weights('./TextCNN/textcnn_model_location_traffic_convenience_01.hdf5')
     print(model.predict(query))
 
 
