@@ -81,6 +81,7 @@ def predict(query):
     # ...
     # ]
     # label: 0正面， 1中性，2反面， 3未提及
+    query = data_process(query)
     res = []
     model = get_model()
 
@@ -92,7 +93,7 @@ def predict(query):
         score += 1
         sentiment.append([sentiment_label, '交通便利'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '交通一般'])
+        sentiment.append([sentiment_label, '交通较便利'])
     elif sentiment_label == 2:
         score -= 1
         sentiment.append([sentiment_label, '交通不便'])
@@ -151,9 +152,9 @@ def predict(query):
     sentiment_label = np.argmax(model.predict(query)[0])
     if sentiment_label == 0:
         score += 1
-        sentiment.append([sentiment_label, '服务好'])
+        sentiment.append([sentiment_label, '服务非常好'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '服务一般'])
+        sentiment.append([sentiment_label, '服务可以'])
     elif sentiment_label == 2:
         score -= 1
         sentiment.append([sentiment_label, '服务差'])
@@ -165,7 +166,7 @@ def predict(query):
     sentiment_label = np.argmax(model.predict(query)[0])
     if sentiment_label == 0:
         score += 1
-        sentiment.append([sentiment_label, '停车方便'])
+        sentiment.append([sentiment_label, '停车很方便'])
     elif sentiment_label == 1:
         sentiment.append([sentiment_label, '较易停车'])
     elif sentiment_label == 2:
@@ -226,12 +227,12 @@ def predict(query):
     sentiment_label = np.argmax(model.predict(query)[0])
     if sentiment_label == 0:
         score += 1
-        sentiment.append([sentiment_label, '折扣力度大'])
+        sentiment.append([sentiment_label, '折扣力度很大'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '折扣力度一般'])
+        sentiment.append([sentiment_label, '有一定折扣力度'])
     elif sentiment_label == 2:
         score -= 1
-        sentiment.append([sentiment_label, '折扣力度小'])
+        sentiment.append([sentiment_label, '折扣力度太小'])
     else:
         sentiment.append([sentiment_label, None])
         # pass
@@ -244,9 +245,9 @@ def predict(query):
     sentiment_label = np.argmax(model.predict(query)[0])
     if sentiment_label == 0:
         score += 1
-        sentiment.append([sentiment_label, '装修不错'])
+        sentiment.append([sentiment_label, '装修很好'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '装修一般'])
+        sentiment.append([sentiment_label, '装修可以'])
     elif sentiment_label == 2:
         score -= 1
         sentiment.append([sentiment_label, '装修差'])
@@ -258,9 +259,9 @@ def predict(query):
     sentiment_label = np.argmax(model.predict(query)[0])
     if sentiment_label == 0:
         score += 1
-        sentiment.append([sentiment_label, '环境安静'])
+        sentiment.append([sentiment_label, '环境安静舒适'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '略有嘈杂'])
+        sentiment.append([sentiment_label, '环境不算嘈杂'])
     elif sentiment_label == 2:
         score -= 1
         sentiment.append([sentiment_label, '环境嘈杂'])
@@ -272,9 +273,9 @@ def predict(query):
     sentiment_label = np.argmax(model.predict(query)[0])
     if sentiment_label == 0:
         score += 1
-        sentiment.append([sentiment_label, '空间宽敞'])
+        sentiment.append([sentiment_label, '空间很宽敞'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '空间大小一般'])
+        sentiment.append([sentiment_label, '空间较为宽敞'])
     elif sentiment_label == 2:
         score -= 1
         sentiment.append([sentiment_label, '空间狭小'])
@@ -286,9 +287,9 @@ def predict(query):
     sentiment_label = np.argmax(model.predict(query)[0])
     if sentiment_label == 0:
         score += 1
-        sentiment.append([sentiment_label, '干净整洁'])
+        sentiment.append([sentiment_label, '非常干净整洁'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '卫生情况一般'])
+        sentiment.append([sentiment_label, '卫生情况可以'])
     elif sentiment_label == 2:
         score -= 1
         sentiment.append([sentiment_label, '卫生情况差'])
@@ -319,9 +320,9 @@ def predict(query):
     sentiment_label = np.argmax(model.predict(query)[0])
     if sentiment_label == 0:
         score += 1
-        sentiment.append([sentiment_label, '口感好'])
+        sentiment.append([sentiment_label, '口感很好'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '口感一般'])
+        sentiment.append([sentiment_label, '口感可以'])
     elif sentiment == 2:
         score -= 1
         sentiment.append([sentiment_label, '口感差'])
@@ -335,7 +336,7 @@ def predict(query):
         score += 1
         sentiment.append([sentiment_label, '菜品精致'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '菜品观感一般'])
+        sentiment.append([sentiment_label, '菜品观感可以'])
     elif sentiment == 2:
         score -= 1
         sentiment.append([sentiment_label, '菜品观感差'])
@@ -369,7 +370,7 @@ def predict(query):
         score += 1
         sentiment.append([sentiment_label, '体验极佳，点赞'])
     elif sentiment_label == 1:
-        sentiment.append([sentiment_label, '感觉一般'])
+        sentiment.append([sentiment_label, '感觉还可以'])
     elif sentiment == 2:
         score -= 1
         sentiment.append([sentiment_label, '体验极差'])
@@ -398,7 +399,7 @@ def predict(query):
 
 
 if __name__ == '__main__':
-    query = data_process('吼吼吼，萌死人的棒棒糖，中了大众点评的霸王餐，太可爱了。一直就好奇这个棒棒糖是怎么个东西，大众点评给了我这个土老冒一个见识的机会。看介绍棒棒糖是用德国糖做的，不会很甜，中间的照片是糯米的，能食用，真是太高端大气上档次了，还可以买蝴蝶结扎口，送人可以买礼盒。我是先打的卖家电话，加了微信，给卖家传的照片。等了几天，卖家就告诉我可以取货了，去大官屯那取的。虽然连卖家的面都没见到，但是还是谢谢卖家送我这么可爱的东西，太喜欢了，这哪舍得吃啊。')
-    res = predict(query)
+    # res = predict('我想说他们家的优惠活动好持久啊，我预售的时候买的券，前两天心血来潮去吃的活动还在继续首先说下服务，因为和男票开车去的，有点不认路，老板很耐心的在电话里帮我们指路，到了门店之后也帮我们推荐了他们家做的比较地道的伤心凉粉，说是厨师是四川那边来的。环境呢比较简单干净，去的时候下午一点多了，还有四五桌人在用餐口味对于我而言点了麻辣的口感正正好，男票比较能吃辣，相对而言觉得他们家的麻辣口感麻有了，辣还欠缺一点，老板娘说考虑到客人口味不同所以没敢放太多辣椒，能吃辣的朋友可以考虑下单之前和老板先说好。鱼呢我们选的是黑鱼，2.9斤的鱼加上一盆我以为没有什么东西实际上东西很多的锅底，我们吃的饱饱的，最后以为吃的差不多了，打包一看简直像没动过一样，分量还是满足的，鱼比较新鲜。伤心凉粉很辣，不过口味也蛮好吃的。总的来说，性价比还是可以的，两个人吃了大概160左右，用了团购券的话一百块不到，会考虑下次再来')
+    res = predict('运气很好，抽中了大众点评的霸王餐。这家主题餐厅心仪已久了，种种原因一直未能成行，没想到抽中了150元的代金券~~~Lucky!!!【位置】这家店位于星游城1楼，就在轨道交通4号线上，交通便利，但是停车场非常考验技术，转得头都晕了。。。【环境】主题餐厅啊，装修的非常好，大赞，处处都是海盗风格！非常喜欢！【服务】每次有人进来，服务员都会高呼“欢迎入伙~”。如果点了海盗的宝藏，他们也会高呼。我点了火烧鹦鹉，服务员还特意问“要不要拍个照啊~”哈哈~~【口味】总体来说还是不错，推荐火烧鹦鹉，很香！周围吃饭的小朋友很多，感觉这是家很适合朋友聚餐的店~~！')
     print(res)
 
