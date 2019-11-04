@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import os
 from collections import Counter
 import pandas as pd
