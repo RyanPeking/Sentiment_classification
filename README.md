@@ -11,14 +11,14 @@
 #### RCNN
 ### 3.评价标准：
 #### 样本存在严重的不平衡问题，负面情绪与中性情绪很少，如果以acc作为评价标准，虽然看起来准确度很高，但是却预测不准小样本数据，因此以f1为评价指标更为合理
-最终f1=0.6056,但并没跑完所有模型，RCNN整体稍好一些，由于时间原因，RCNN只跑了前几个类别
+#### 最终f1=0.6056,但并没跑完所有模型，RCNN整体稍好一些，由于时间原因，RCNN只跑了前几个类别
 ### 4.调参总结
 #### 模型：TextCNN及RCNN总体表现更好一些
 #### 分词：对于RCNN, char级别好于word级别，其他未测试
 #### LSTM与GRU:LSTM略好于GRU
 #### Hidden_size: 256>128
 #### Class_weight: 设置过balanced方式，但发现效果不好，分析是因为某些样本数据过少，设置太大惩罚项之后会导致小样本的过拟合
-但对于TextCNN，Class_weight为0: 1, 1: 3, 2: 3, 3: 0.5更佳，但对于RCNN,不设置class_weight更佳
+#### 但对于TextCNN，Class_weight为0: 1, 1: 3, 2: 3, 3: 0.5更佳，但对于RCNN,不设置class_weight更佳
 #### Batch_size:32>128,可能是由于小的batchsize随机性更强，带来的噪声有助于逃离sharp minimum，模型泛化能力更好。
 #### Loss:虽然y为one_hot形式，但loss设置为binary_crossentropy,收敛更快，这是因为binary_crossentropy同时更新0类标签
 ### 5.效果展示
