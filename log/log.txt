@@ -1,0 +1,4 @@
+2019-11-05 08:55:46,738 - __init__.py[line:111] - DEBUG: Building prefix dict from the default dictionary ...
+2019-11-05 08:55:46,740 - __init__.py[line:131] - DEBUG: Loading model from cache C:\Users\ADMINI~1\AppData\Local\Temp\jieba.cache
+2019-11-05 08:55:47,820 - __init__.py[line:163] - DEBUG: Loading model cost 1.080 seconds.
+2019-11-05 08:55:47,821 - __init__.py[line:164] - DEBUG: Prefix dict has been built succesfully.

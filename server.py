@@ -57,28 +57,28 @@ def comment():
 
 
 # 静态文件
-# @route('/static/img/<filename>')
-# def send_image(filename):
-#   return static_file(filename, root='./dist/static/img/')
-# @route('/static/css/<filename>')
-# def send_css(filename):
-#   return static_file(filename, root='./dist/static/css/')
-# @route('/static/js/<filename>')
-# def send_js(filename):
-#   return static_file(filename, root='./dist/static/js/')
-# @route('/static/<filename>')
-# def send_urlconfig(filename):
-#   return static_file(filename, root='./dist/static/')
-# @route('/static/fonts/<filename>')
-# def send_fonts(filename):
-#   return static_file(filename, root='./dist/static/fonts/')
-# @route('/favicon.ico')
-# def send_ico():
-#   return static_file('favicon.ico', root='./')
+@route('/static/img/<filename>')
+def send_image(filename):
+  return static_file(filename, root='./dist/static/img/')
+@route('/static/css/<filename>')
+def send_css(filename):
+  return static_file(filename, root='./dist/static/css/')
+@route('/static/js/<filename>')
+def send_js(filename):
+  return static_file(filename, root='./dist/static/js/')
+@route('/static/<filename>')
+def send_urlconfig(filename):
+  return static_file(filename, root='./dist/static/')
+@route('/static/fonts/<filename>')
+def send_fonts(filename):
+  return static_file(filename, root='./dist/static/fonts/')
+@route('/favicon.ico')
+def send_ico():
+  return static_file('favicon.ico', root='./')
 
 
-# @route('/')
-# def index():
-#   return template('./dist/index.html')
+@route('/')
+def index():
+  return template('./dist/index.html')
 
 run(host='127.0.0.1', port=1234, debug=True)
