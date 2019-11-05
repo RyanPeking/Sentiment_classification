@@ -81,4 +81,4 @@ def send_ico():
 def index():
   return template('./dist/index.html')
 
-run(host='127.0.0.1', port=1234, debug=True)
+run(host='0.0.0.0', port=1234, debug=True)
